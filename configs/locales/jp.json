@@ -1,0 +1,29 @@
+{
+    "sidebar":{
+        "first_name":"スジート",
+        "last_name":"トワナバス",
+        "work_title":"ソフトウェア開発者",
+        "street_address":"ウォンティ",
+        "ward":"10",
+        "city":"バクタプル",
+        "state":"バグマティ",
+        "zip":"44800",
+        "country":"ネパール",
+        "email":"suzeettb@gmail.com",
+        "phone":"+977-9860487773",
+        "btn_download_resume":"履歴書をダウンロード",
+        "btn_send_email":"私にメールを送ってください!"
+    },
+    "navbar":{
+        "home":"Home",
+        "about":"About",
+        "blogs":"Blogs",
+        "resume":"Resume",
+        "projects":"Projects"
+    },
+    "about":{
+        "intro":"こんにちは、私はSuzeet、ネパールからのソフトウェア開発者です。私はコーディングに情熱を注いでおり、開発者としてのプログラミングスキルを常に活用したいと考えています。私は新しいことを学び、自分自身を改善する方法を見つけるのが大好きです。",
+        "intro1":"私はウェブサイト、ウェブアプリ、Androidアプリを構築した経験があります。私はHTML5、CSS3、ブートストラップ、JSの専門知識を持つフロントエンド開発者としての経験があります。そして、私はAdobe Photoshop、Illustratorを使用するための幅広い知識を持っています。私はまた、React、NextJS、NodeJS、ExpressJS、MongoDB、FireBaseの経験もあります。",
+        "exp_title":"経験"
+    }
+}

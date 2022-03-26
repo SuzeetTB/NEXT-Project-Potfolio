@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind customizations */
+body {
+  /* color: #ffffff; */
+  background-color: #212529;
+  color: #354358;
+}
+
+h1 {
+  color: aquamarine;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: #354358; */
+  background-image: linear-gradient(to right bottom, #02cfd5, #00275f);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: auto;
+}

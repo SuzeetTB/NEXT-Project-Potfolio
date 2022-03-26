@@ -1,0 +1,29 @@
+{
+    "sidebar":{
+        "first_name":"Suzeet",
+        "last_name":"Twanabasu",
+        "work_title":"Software Developer",
+        "street_address":"Wonti",
+        "ward":"10",
+        "city":"Bhaktapur",
+        "state":"Bagmati",
+        "zip":"44800",
+        "country":"Nepal",
+        "email":"suzeettb@gmail.com",
+        "phone":"+977-9860487773",
+        "btn_download_resume":"Download Resume",
+        "btn_send_email":"Send me a Mail!"
+    },
+    "navbar":{
+        "home":"Home",
+        "about":"About",
+        "blogs":"Blogs",
+        "resume":"Resume",
+        "projects":"Projects"
+    },
+    "about":{
+        "intro":"Hi, I'm Suzeet, a software developer from Nepal. I have a passion for coding & I am always looking to leverage my programming skills as a developer. I love to learn new things and find ways to improve myself.",
+        "intro1":"I have experience building websites, webApps and Android App. I am experienced as a front end developer with expertise on HTML5, CSS3, Bootstrap, JS; and I have a well rounded knowledge of using Adobe Photoshop, Illustrator. I am also experienced with React, NextJS, NodeJS, ExpressJS, MongoDB and FireBase.",
+        "exp_title":"Experience"
+    }
+}
