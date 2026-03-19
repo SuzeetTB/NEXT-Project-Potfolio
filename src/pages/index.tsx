@@ -2,8 +2,6 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
 // import ParticleWrapper from "../components/Particles/Particles";
-import InfoCard from "../components/serviceCard/ServiceCard";
-import { experiences } from "../configs/data";
 import { pageSwitchAnimation, stagger } from "../utils/Animation";
 import { useTranslations } from "next-intl";
 import { GetStaticProps } from "next/types";
@@ -13,6 +11,7 @@ import Profile from "@/components/Profile/Profile";
 import Sidebar from "@/components/Profile/MobileProfile";
 import MyHeader from "@/components/layout/MyHeader";
 import { MyExperience } from "@/components/MyExperience";
+import { MyTechStack } from "@/components/MyTechStack";
 
 const Index: FC = () => {
   const { isDesktop } = useDeviceType();
@@ -33,18 +32,15 @@ const Index: FC = () => {
             <Sidebar />
           </div>
         )}
-        <h4 className="justify-around my-3 font-medium tracking-wider">
+        <h4 className="justify-around font-medium tracking-wider">
           {t("intro")}
         </h4>
-        <p className="justify-around my-3 font-medium tracking-wider">
+        <p className="justify-around font-medium tracking-wider">
           {t("intro1")}
         </p>
-
+        <MyTechStack/>
         <MyExperience/>
       </div>
-      {/* <div className="absolute flex w-32 h-32 -z-10">
-        <ParticleWrapper width="300px" height="200px" />
-      </div> */}
     </motion.div>
   );
 };

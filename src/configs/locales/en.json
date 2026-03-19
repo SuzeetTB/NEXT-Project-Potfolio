@@ -26,6 +26,7 @@
     "about":{
         "intro":"Hi, I'm Suzeet, a software developer from Nepal. I have a passion for coding & I am always looking to leverage my programming skills as a developer. I love to learn new things and find ways to improve myself.",
         "intro1":"I have experience building websites, webApps and Android App. I am experienced as a front end developer with expertise on HTML5, CSS3, Bootstrap, JS; and I have a well rounded knowledge of using Adobe Photoshop, Illustrator. I am also experienced with React, NextJS, NodeJS, ExpressJS, MongoDB and FireBase.",
-        "exp_title":"Experience"
+        "exp_title":"Experience",
+        "tech_stack_title":"Skills and Stacks"
     }
 }

@@ -27,7 +27,7 @@ const ProjectCard: React.FC<{
 }) => {
   return (
     <motion.div
-      className="col-span-12 p-2 rounded bg-gradient-to-r from-light-400 to-light-300 dark:from-zeit-950 dark:to-zeit-800 sm:col-span-6 lg:col-span-4"
+      className="col-span-12 p-2 rounded bg-linear-to-r from-light-400 to-light-300 dark:from-zeit-950 dark:to-zeit-800 sm:col-span-6 lg:col-span-4"
       variants={fadeInUp}
     >
       <div className="px-1 my-2 overflow-auto ">
@@ -112,7 +112,7 @@ const ProjectCard: React.FC<{
                 animate="final"
                 className="flex flex-wrap-reverse mt-5 space-x-2 text-sm tracking-wider"
               >
-                {key_features.map((feature, index) => (
+                {key_features?.map((feature, index) => (
                   <motion.span
                     variants={fadeInLeft}
                     key={index}

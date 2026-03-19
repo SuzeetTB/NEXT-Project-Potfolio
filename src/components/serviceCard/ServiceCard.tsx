@@ -13,7 +13,7 @@ const InfoCard: FC<{ service: Iservices }> = ({
 
   return (
     <motion.div
-      className="flex items-center p-4 my-2 gap-x-4 rounded-lg lg:col-span-1 bg-linear-to-r from-light-400 to-light-300 dark:from-zeit-600 dark:to-zeit-800"
+      className="flex items-center p-4 my-2 gap-x-4 rounded-lg lg:col-span-1 custom-card-bg"
       variants={fadeInUp}
     >
       <Icon

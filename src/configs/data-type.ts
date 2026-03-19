@@ -14,6 +14,7 @@ export interface ISkill {
     title: string;
     Icon: IconType;
     level: string;  
+    category: string;
 }
 
 export interface IAcademics {
@@ -37,3 +38,9 @@ export interface IProject {
 }
 
 export type Category = "all"|"react"|"node"|"python"|"android"|"django"|"laravel"|"flutter"|"angular"|"vue"|"react-native"|"ionic"|"swift"|"c"|"c++"|"c#"|"java"|"php"|"html"|"css"|"javascript"|"typescript"|"sql"|"mongodb"|"firebase"|"mysql"|"postgresql"|"redis"|"mongodb"|"aws"|"azure"|"heroku"|"firebase"|"firebase-functions"|"firebase-cloud-messaging"|"firebase-database"|"firebase-storage"|"firebase-analytics"|"firebase-crashlytics"|"firebase-admob"|"firebase-auth"|"firebase-firestore"|"firebase-messaging"|"firebase-performance"|"firebase-remote-config"|"firebase-analytics"|"firebase-crashlytics"|"firebase-admob"|"firebase-auth"|"firebase-firestore"|"firebase-messaging"|"firebase-performance"|"firebase-remote-config"|"firebase-analytics"|"firebase-crashlytics"|"firebase-admob"|"firebase-auth"|"firebase-firestore"|"firebase-messaging"|"firebase-performance"|"firebase-remote-config"|"firebase-analytics"|"firebase-crashlytics"|"firebase-admob"|"firebase-auth"|"firebase-firestore"|"firebase-messaging"|"firebase-performance"|"firebase-remote-config"|"firebase-analytics"|"firebase-crashlytics"|"firebase-admob"|"firebase-auth"|"firebase-firestore"|"firebase-messaging"|"firebase-performance"|"firebase-remote-config"|"firebase-analytics"|"firebase-crashlytics"
+
+export interface ISkillGroup {
+    category: string;
+    Icon: React.ElementType;
+    skills: ISkill[];
+  }

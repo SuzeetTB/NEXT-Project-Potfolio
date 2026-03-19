@@ -19,16 +19,24 @@
   --color-zeit-800: #003b93;
   --color-zeit-950: #00275f; */
 
-  --color-zeit-50:  #e6f0ff;
+  --color-zeit-50: #e6f0ff;
   --color-zeit-100: #b3d1ff;
-  --color-zeit-200: #00a0f2; /* Old zeit-100 */
-  --color-zeit-300: #005ae0; /* Old zeit-200 */
-  --color-zeit-400: #0050c6; /* Old zeit-50 */
-  --color-zeit-500: #003b93; /* Old zeit-800 - Base Primary */
-  --color-zeit-600: #00317a; /* Old zeit-300 */
-  --color-zeit-700: #00275f; /* Old zeit-950 */
-  --color-zeit-800: #00122c; /* Old zeit */
-  --color-zeit-950: #000814; /* Near black-blue */
+  --color-zeit-200: #00a0f2;
+  /* Old zeit-100 */
+  --color-zeit-300: #005ae0;
+  /* Old zeit-200 */
+  --color-zeit-400: #0050c6;
+  /* Old zeit-50 */
+  --color-zeit-500: #003b93;
+  /* Old zeit-800 - Base Primary */
+  --color-zeit-600: #00317a;
+  /* Old zeit-300 */
+  --color-zeit-700: #00275f;
+  /* Old zeit-950 */
+  --color-zeit-800: #00122c;
+  /* Old zeit */
+  --color-zeit-950: #000814;
+  /* Near black-blue */
 
   /* Light Palette */
   /* --color-light: #26f7fd;
@@ -38,13 +46,18 @@
   --color-light-500: #018579;
   --color-light-900: #26f7E0; */
 
-  --color-light-50:  #ecfeff;
+  --color-light-50: #ecfeff;
   --color-light-100: #cffafe;
-  --color-light-200: #26f7fd; /* Old light */
-  --color-light-300: #02e7ee; /* Old light-200 */
-  --color-light-400: #02cfd5; /* Old light-300 */
-  --color-light-500: #02b7b2; /* Old light-400 - Base Secondary */
-  --color-light-600: #018579; /* Old light-500 */
+  --color-light-200: #26f7fd;
+  /* Old light */
+  --color-light-300: #02e7ee;
+  /* Old light-200 */
+  --color-light-400: #02cfd5;
+  /* Old light-300 */
+  --color-light-500: #02b7b2;
+  /* Old light-400 - Base Secondary */
+  --color-light-600: #018579;
+  /* Old light-500 */
   --color-light-700: #0e7490;
   --color-light-800: #155e75;
   --color-light-900: #164e63;
@@ -60,21 +73,48 @@
   --animation-beat: beat 1s ease-out infinite;
 
   @keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(3deg); }
+
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(3deg);
+    }
   }
+
   @keyframes beat {
-    0%, 100% { transform: scale(1); }
-    25% { transform: scale(1.2); }
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    25% {
+      transform: scale(1.2);
+    }
   }
+
   @keyframes ring {
-    0% { transform: rotate(0deg); box-shadow: 1px 3px 5px rgba(255,0,255, 0.5); }
-    50% { transform: rotate(180deg); box-shadow: 1px 3px 5px rgba(255,255,255, 0.8); }
-    100% { transform: rotate(360deg); box-shadow: 1px 3px 5px rgba(255,0,0, 0.5); }
+    0% {
+      transform: rotate(0deg);
+      box-shadow: 1px 3px 5px rgba(255, 0, 255, 0.5);
+    }
+
+    50% {
+      transform: rotate(180deg);
+      box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.8);
+    }
+
+    100% {
+      transform: rotate(360deg);
+      box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.5);
+    }
   }
 
   /* Custom Box Shadows */
-  --shadow-ring: 0 0 5px rgba(255,255,255, 0.3);
+  --shadow-ring: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 @layer base {
@@ -82,22 +122,38 @@
     /* Use 'zeit' directly now that it's defined in @theme */
     @apply bg-white text-gray-900 dark:bg-zeit dark:text-white transition-colors duration-300;
   }
+
   h1 {
     color: aquamarine;
   }
+
+}
+
+@layer utilities {
+  .custom-card-bg {
+    @apply bg-linear-to-r from-light-400 to-light-300 dark:from-zeit-600 dark:to-zeit-800;
+  }
+
+  .custom-tag-bg {
+    @apply text-white hover:text-zeit-800 hover:dark:text-light-400 bg-linear-to-r from-light-400 to-light-300 dark:from-zeit-600 dark:to-zeit-800;
+  }
+
+
   .glass-card {
-    background: rgba(255, 255, 255, 0.1); /* transparent layer */
-    backdrop-filter: blur(10px);          /* the blur magic */
-    -webkit-backdrop-filter: blur(10px);  /* for Safari */
+    background: rgba(255, 255, 255, 0.1);
+    /* transparent layer */
+    backdrop-filter: blur(10px);
+    /* the blur magic */
+    -webkit-backdrop-filter: blur(10px);
+    /* for Safari */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     padding: 20px;
     color: #fff;
   }
-}
 
-@layer utilities {
+
   /* Standard CSS for scrollbars */
   ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(to right bottom, #02cfd5, #00275f);
