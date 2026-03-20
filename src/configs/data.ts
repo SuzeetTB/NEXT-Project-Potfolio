@@ -17,7 +17,7 @@ import {
   FaLayerGroup,
   FaDatabase,
 } from "react-icons/fa6";
-import { RiComputerLine, RiSimCard2Line } from "react-icons/ri";
+import { RiComputerLine, RiDatabase2Line, RiSimCard2Line } from "react-icons/ri";
 import {
   SiCplusplus,
   SiDjango,
@@ -33,46 +33,58 @@ import {
   SiTailwindcss,
   SiTensorflow,
 } from "react-icons/si";
-import { IAcademics, IProject, Iservices, ISkill, ISkillGroup } from "./data-type";
+import { IAcademics, IExperience, IProject, ISkill, ISkillGroup } from "./data-type";
 
-export const experiences: Array<Iservices> = [
-  {
-    id: 1,
-    title: "MeroParty",
-    description:
-      "A Web App Project, developed with TypeScript- <b>Node</b>, <b>React</b>, With MariaDB for a <em>Venue/Event Management Tool</em>. ",
-    image: "https://meroparty.com/assets/mero-party-logo-y-470e799b.avif",
-    category: "Category 1",
-    Icon: FaHotel,
-  },
-  {
-    id: 2,
-    title: "ICC Communications",
-    description:
-      "A Telecommunication company, worked as a Sales, Tech-Support, and a Translator in Nepali-Japanese-English.",
-    image: "https://picsum.photos/200/300",
-    category: "Category 2",
-    Icon: RiSimCard2Line,
-  },
-  {
-    id: 3,
-    title: "Axios Softworks",
-    description:
-      "Worked with <b>Kotlin</b> for <em>Android App Development</em> on a india-based Project called Avail Finance.",
-    image: "https://picsum.photos/200/300",
-    category: "Category 3",
-    Icon: RiComputerLine,
-  },
-  {
-    id: 4,
-    title: "Axios Softworks",
-    description:
-      "Worked with <b>Node JS</b>, <b>ReactJs</b>, <b>Ruby on Rails</b> on various Web projects like Nivid, Bolpatra, Edfluent",
-    image: "https://picsum.photos/200/300",
-    category: "Category 4",
-    Icon: RiComputerLine,
-  },
-];
+export const experiences: Array<IExperience> = [
+    {
+      id: 1,
+      title: "MeroParty",
+      role: "Front-End Engineer",
+      location: "Bhaktapur, Nepal",
+      date: "August 2024 - Present",
+      description:
+        "Built a <em>Venue Management Tool</em> using <b>Node.js</b> and <b>React</b>. Developed web and app interfaces for venue-side management and mentored junior developers.",
+      image: "https://meroparty.com/assets/mero-party-logo-y-470e799b.avif",
+      category: "Development",
+      Icon: FaHotel,
+    },
+    {
+      id: 2,
+      title: "ICC Communications",
+      role: "Sales/Marketing",
+      location: "Ueno, Japan",
+      date: "December 2023 - August 2024",
+      description:
+        "Leveraged multilingual skills (<b>English, Nepali, Japanese</b>) to engage diverse customers. Increased <em>SIM card</em> and mobile phone sales through effective support.",
+      image: "https://picsum.photos/200/300", // Replace with ICC logo if available
+      category: "Sales & Support",
+      Icon: RiSimCard2Line,
+    },
+    {
+      id: 3,
+      title: "Axios Softworks",
+      role: "Full Stack Developer",
+      location: "Banepa, Nepal",
+      date: "April 2021 - April 2022",
+      description:
+        "Developed web applications using <b>Node.js</b>, <b>React</b>, and <b>Ruby on Rails</b> for projects like <em>NIVID School Management</em>. Contributed to an Android app using <b>Kotlin</b>.",
+      image: "https://picsum.photos/200/301",
+      category: "Development",
+      Icon: RiComputerLine,
+    },
+    {
+      id: 4,
+      title: "Cloud Factory",
+      role: "Data Entry/Image Training",
+      location: "Bhaisepati, Nepal",
+      date: "September 2019 - May 2022",
+      description:
+        "Collected and annotated image data using proprietary tools for <b>AI model training</b> and data processing.",
+      image: "https://picsum.photos/200/302",
+      category: "Data Science",
+      Icon: RiDatabase2Line,
+    },
+  ];
 
 export const languages: Array<ISkill> = [
   {

@@ -1,9 +1,5 @@
 import { useTheme } from "next-themes";
-import {
-  FaLanguage,
-  FaMoon,
-  FaSun,
-} from "react-icons/fa6";
+import { FaGlobe, FaMoon, FaSun } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import { useLocale } from "next-intl";
 import { Dropdown, MenuProps, Space, Switch } from "antd";
@@ -54,9 +50,23 @@ const ThemeAndLanguageToggler = () => {
           onClick={changeTheme}
         />
       </Space>
-      <Dropdown menu={{ items }} placement="bottomLeft">
+      <Dropdown
+        menu={{
+          items,
+          className: "glass-card backdrop-blur-md",
+          style: {
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            backgroundColor: "transparent",
+            border:"1px var(--foreground)",
+            color:"var(--muted-foreground)",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)"
+          },
+        }}
+        placement="bottomLeft"
+      >
         <Space className="w-8 h-6 p-0 ring-0 border-0">
-          <FaLanguage className="w-8 h-8 text-white" />
+          <FaGlobe className="w-5 h-5 text-foreground rounded-2xl shadow-2xl ring-foreground p-0.5" />
         </Space>
       </Dropdown>
     </div>

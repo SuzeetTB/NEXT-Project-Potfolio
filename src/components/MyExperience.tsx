@@ -3,31 +3,35 @@ import { motion } from "framer-motion";
 import InfoCard from "./serviceCard/ServiceCard";
 import { stagger } from "../utils/Animation";
 import { useTranslations } from "next-intl";
+import { Timeline } from "antd";
+import useDeviceType from "@/hooks/useDeviceType";
 
 export const MyExperience = () => {
+  const {isMobile} = useDeviceType()
   const t = useTranslations("about");
 
   return (
     <div
-      className="grow p-4 mt-5"
-      style={{
-        marginRight: "-1.5rem",
-        marginLeft: "-1.5rem",
-      }}
+      className="grow p-4 mt-5 custom-card-bg rounded-4xl"
     >
-      <h5 className="my-3 text-xl font-bold tracking-wider text-white dark:text-light-300">
+      <h5 className="my-3 text-2xl font-bold tracking-wider text-foreground">
         {t("exp_title")}
       </h5>
-      <motion.div
-        className="grid gap-6 lg:grid-cols-2"
-        variants={stagger}
-        initial="initial"
-        animate="final"
-      >
-        {experiences &&
-          experiences?.map((exp) => (
-            <InfoCard service={exp} key={exp.id} />
-          ))}
+      <motion.div variants={stagger} initial="initial" animate="final">
+        <Timeline
+          className="ml-2 md:ml-8 w-auto"
+          mode={isMobile? "left": "alternate"} // Options: 'left', 'alternate', 'right'
+          variant="filled"
+          items={experiences?.map((exp) => ({
+            // The label usually shows the date on the opposite side (if mode="alternate")
+            label: isMobile? '': <span className="text-foreground font-mono">{exp.date}</span>,
+            dot: (
+              <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />
+            ),
+            tail:{style:{background:"white"}},
+            children: <InfoCard exp={exp} key={exp.id} />,
+          }))}
+        />
       </motion.div>
     </div>
   );

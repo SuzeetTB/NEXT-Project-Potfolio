@@ -28,5 +28,10 @@
         "intro1":"I have experience building websites, webApps and Android App. I am experienced as a front end developer with expertise on HTML5, CSS3, Bootstrap, JS; and I have a well rounded knowledge of using Adobe Photoshop, Illustrator. I am also experienced with React, NextJS, NodeJS, ExpressJS, MongoDB and FireBase.",
         "exp_title":"Experience",
         "tech_stack_title":"Skills and Stacks"
-    }
+    },
+    "quick_links":"Quick Links",
+    "contact":"Contact",
+    "connect":"Connect With Me",
+    "copyright":"All Rights Reserved",
+    "built_on_stacks":"Built with Next.js, React & Tailwind CSS"
 }

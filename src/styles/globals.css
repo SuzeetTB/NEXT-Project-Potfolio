@@ -9,65 +9,16 @@
   --font-monton: "Monoton", cursive;
   --font-inspiration: "Inspiration", cursive;
 
-  /* Zeit Palette */
-  --color-zeit: #00122c;
-  /* --color-zeit-10: #27cded57;
-  --color-zeit-50: #0050c6;
-  --color-zeit-100: #00a0f2;
-  --color-zeit-200: #005ae0;
-  --color-zeit-300: #00317a;
-  --color-zeit-800: #003b93;
-  --color-zeit-950: #00275f; */
+  /* Simplified Palette */
+  --color-primary: #26f7fd;
+  --color-dark: #00275f;
 
-  --color-zeit-50: #e6f0ff;
-  --color-zeit-100: #b3d1ff;
-  --color-zeit-200: #00a0f2;
-  /* Old zeit-100 */
-  --color-zeit-300: #005ae0;
-  /* Old zeit-200 */
-  --color-zeit-400: #0050c6;
-  /* Old zeit-50 */
-  --color-zeit-500: #003b93;
-  /* Old zeit-800 - Base Primary */
-  --color-zeit-600: #00317a;
-  /* Old zeit-300 */
-  --color-zeit-700: #00275f;
-  /* Old zeit-950 */
-  --color-zeit-800: #00122c;
-  /* Old zeit */
-  --color-zeit-950: #000814;
-  /* Near black-blue */
+  /* Additional UI Colors if needed */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: #6ba5a7;
 
-  /* Light Palette */
-  /* --color-light: #26f7fd;
-  --color-light-200: #02e7ee;
-  --color-light-300: #02cfd5;
-  --color-light-400: #02b7b2;
-  --color-light-500: #018579;
-  --color-light-900: #26f7E0; */
-
-  --color-light-50: #ecfeff;
-  --color-light-100: #cffafe;
-  --color-light-200: #26f7fd;
-  /* Old light */
-  --color-light-300: #02e7ee;
-  /* Old light-200 */
-  --color-light-400: #02cfd5;
-  /* Old light-300 */
-  --color-light-500: #02b7b2;
-  /* Old light-400 - Base Secondary */
-  --color-light-600: #018579;
-  /* Old light-500 */
-  --color-light-700: #0e7490;
-  --color-light-800: #155e75;
-  --color-light-900: #164e63;
-  --color-light-950: #083344;
-
-  /* Dark Palette */
-  --color-dark: #000104;
-  --color-dark-200: #00071E;
-
-  /* Custom Animations & Keyframes */
+  /* Animations */
   --animation-wiggle: wiggle 1s ease-in-out infinite;
   --animation-ring: ring 2s linear infinite;
   --animation-beat: beat 1s ease-out infinite;
@@ -119,25 +70,43 @@
 
 @layer base {
   body {
-    /* Use 'zeit' directly now that it's defined in @theme */
-    @apply bg-white text-gray-900 dark:bg-zeit dark:text-white transition-colors duration-300;
+    @apply bg-linear-to-r from-primary/30 to-primary/5 text-dark dark:from-dark dark:to-dark/50 dark:text-white transition-colors duration-300;
   }
 
-  h1 {
-    color: aquamarine;
+  :root {
+    --background: #1a2f4d;
+    --foreground: #2083b1;
+    --muted-foreground: #63a6cc;
   }
 
+  .dark {
+    --background: #389797;
+    --foreground: #26f7fd;
+    --muted-foreground: #6ba5a7;
+  }
+  .ant-dropdown-menu {
+    padding: 0% !important;
+  }
+  .ant-dropdown-menu-item:hover {
+    background-color: var(--foreground) !important;
+    color: var(--background) !important;
+    margin: 0%;
+  }
+  .ant-dropdown-menu-item {
+    color: var(--foreground) !important;
+  } 
 }
 
 @layer utilities {
+
+  /* Reduced Gradient Logic using Opacity Modifiers */
   .custom-card-bg {
-    @apply bg-linear-to-r from-light-400 to-light-300 dark:from-zeit-600 dark:to-zeit-800;
+    @apply bg-linear-to-r from-dark/10 to-primary/30 dark:from-dark dark:to-dark/60 shadow-xl;
   }
 
   .custom-tag-bg {
-    @apply text-white hover:text-zeit-800 hover:dark:text-light-400 bg-linear-to-r from-light-400 to-light-300 dark:from-zeit-600 dark:to-zeit-800;
+    @apply text-foreground text-sm font-medium rounded-full bg-linear-to-r from-dark/20 to-primary/90 dark:from-primary/10 dark:to-dark/70 shadow-md;
   }
-
 
   .glass-card {
     background: rgba(255, 255, 255, 0.1);
@@ -156,7 +125,7 @@
 
   /* Standard CSS for scrollbars */
   ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(to right bottom, #02cfd5, #00275f);
+    background-image: linear-gradient(to right bottom, #26f7fd, #00275f);
   }
 
   ::-webkit-scrollbar {

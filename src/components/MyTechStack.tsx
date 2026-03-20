@@ -8,31 +8,27 @@ export const MyTechStack = () => {
   return (
     <div
       className="grow p-4 mt-5"
-      style={{
-        marginRight: "-1.5rem",
-        marginLeft: "-1.5rem",
-      }}
     >
-      <h5 className="my-3 text-xl font-bold tracking-wider text-white dark:text-light-300">
+      <h5 className="my-3 text-2xl font-bold tracking-wider text-foreground">
         {t("tech_stack_title")}
       </h5>
       <motion.div variants={fadeInUp} initial="initial" animate="final">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {skillGroups.map((group, idx) => (
             <div
               key={idx}
-              className="rounded-3xl p-8 transition-all duration-300 group glass-card"
+              className="rounded-3xl p-8 transition-all duration-300 group glass-card hover:scale-105 backdrop-blur-md"
             >
               <div className="flex flex-1 items-center gap-3">
                 {/* Category Icon */}
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-slate-800/50 rounded-2xl group-hover:scale-110 transition-transform">
-                    <group.Icon className="w-5 h-5 text-cyan-400" />
+                  <div className="p-4 bg-foreground/20 rounded-2xl group-hover:scale-110 transition-transform">
+                    <group.Icon className="w-5 h-5 text-foreground" />
                   </div>
                 </div>
 
                 {/* Category Title */}
-                <h3 className="text-lg md:text-xl font-semibold text-center md:text-left mb-8 text-slate-200">
+                <h3 className="text-lg md:text-xl font-semibold text-center md:text-left mb-8 text-foreground">
                   {group.category}
                 </h3>
               </div>
@@ -42,7 +38,7 @@ export const MyTechStack = () => {
                 {group.skills.map((skill) => (
                   <span
                     key={skill.id}
-                    className="custom-tag-bg px-3 py-1 text-sm font-medium rounded-full  transition-colors cursor-default flex items-center gap-2 hover:animate-bounce"
+                    className="custom-tag-bg px-3 py-1 transition-colors cursor-default flex items-center gap-2 hover:animate-ring"
                   >
                     <skill.Icon />
                     {skill.title}

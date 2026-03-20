@@ -44,3 +44,15 @@ export interface ISkillGroup {
     Icon: React.ElementType;
     skills: ISkill[];
   }
+
+  export interface IExperience {
+    id: number;
+    title: string;
+    role: string;
+    location: string;
+    date: string;
+    description: string;
+    image: string;
+    category: string;
+    Icon: any;
+  }

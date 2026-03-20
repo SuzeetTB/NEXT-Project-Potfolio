@@ -7,20 +7,20 @@ import {
   languages,
   tools,
   experiences as AllServices,
+  experiences,
 } from "../configs/data";
 import { motion } from "framer-motion";
 import { fadeInUp, pageSwitchAnimation } from "../utils/Animation";
-import { Iservices } from "../configs/data-type";
-import Head from "next/head";
 import { GetStaticProps } from "next/types";
 import { getI18nProps } from "@/lib/i18n";
 import MyHeader from "@/components/layout/MyHeader";
+import { IExperience } from "@/configs/data-type";
 // type Props = {};
 
 const Resume: React.FC = () => {
-  const [services, setServices] = React.useState<Array<Iservices>>();
+  const [services, setServices] = React.useState<Array<IExperience>>();
   useEffect(() => {
-    setServices(AllServices.slice(0, 2));
+    setServices(experiences.slice(0, 2));
   }, []);
 
   return (
@@ -47,7 +47,7 @@ const Resume: React.FC = () => {
             <p className="my-3 text-xl font-inspiration">date</p>
           </div> */}
           {services?.map((service) => (
-            <InfoCard key={service.id} service={service} />
+            <InfoCard key={service.id} exp={service} />
           ))}
         </motion.div>
         <motion.div

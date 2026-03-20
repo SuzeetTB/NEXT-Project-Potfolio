@@ -12,6 +12,8 @@ import Sidebar from "@/components/Profile/MobileProfile";
 import MyHeader from "@/components/layout/MyHeader";
 import { MyExperience } from "@/components/MyExperience";
 import { MyTechStack } from "@/components/MyTechStack";
+import GetInTouch from "@/components/GetInTouch";
+import FindMe from "@/components/FindMe";
 
 const Index: FC = () => {
   const { isDesktop } = useDeviceType();
@@ -32,14 +34,15 @@ const Index: FC = () => {
             <Sidebar />
           </div>
         )}
-        <h4 className="justify-around font-medium tracking-wider">
+        <p className="justify-around font-medium tracking-wider text-justify px-4">
           {t("intro")}
-        </h4>
-        <p className="justify-around font-medium tracking-wider">
+          <br /><br />
           {t("intro1")}
         </p>
-        <MyTechStack/>
-        <MyExperience/>
+        <MyTechStack />
+        <MyExperience />
+        <GetInTouch/>
+        <FindMe/>
       </div>
     </motion.div>
   );

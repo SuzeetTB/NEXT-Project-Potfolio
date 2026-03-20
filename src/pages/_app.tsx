@@ -3,13 +3,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import MyNavbar from "@/components/layout/MyNavBar";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
-import ThemeAndLanguageToggler from "@/components/ui/ThemeAndLanguageToggler";
 import { NextIntlClientProvider } from "next-intl";
-import Sidebar from "@/components/Profile/MobileProfile";
 import { AppProps } from "next/app";
 import MyFooter from "@/components/layout/MyFooter";
-import useDeviceType from "@/hooks/useDeviceType";
-import Profile from "@/components/Profile/Profile";
 
 const queryClient = new QueryClient();
 

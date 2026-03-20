@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import ThemeAndLanguageToggler from "../ui/ThemeAndLanguageToggler";
+import { Divider } from "antd";
 
 const NavItem: FC<{
   activeNavItem: string;
@@ -15,7 +16,7 @@ const NavItem: FC<{
   return activeNavItem !== name ? (
     <Link href={route} className="relative text-xl ">
       <span
-        className="text-2xl font-bold text-white hover:text-transparent bg-clip-text hover:bg-linear-to-bl from-teal-500 to-teal-100 dark:border-light-500 md:text-2xl " //hover:text-slate-500 hover:border-r-2
+        className="text-xl font-medium text-foreground hover:text-transparent bg-clip-text hover:bg-linear-to-bl from-teal-500 to-teal-100 md:text-2xl"
         onClick={() => {
           setActiveNavItem(name);
         }}
@@ -39,7 +40,7 @@ const MyNavbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 right-0 w-full z-50 bg-linear-to-r from-light-500 to-light-200 dark:from-zeit dark:to-zeit-200" >
+    <nav className="fixed top-0 right-0 w-full z-50 bg-none backdrop-blur-md shadow-2xl" >
       <div className="flex justify-between items-center px-5 py-3 max-w-7xl mx-auto">
       <div className="flex flex-row">
       <Image
@@ -58,7 +59,7 @@ const MyNavbar = () => {
 
         {/* Hamburger Icon for Mobile */}
         <button 
-          className="md:hidden text-white p-2 focus:outline-none"
+          className="md:hidden dark:text-white text-dark  p-2 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {/* Simple Hamburger Icon SVG */}
@@ -72,14 +73,14 @@ const MyNavbar = () => {
         </button>
 
         {/* Nav Items - Desktop View */}
-        <div className="hidden md:flex gap-5">
+        <div className="hidden md:flex gap-5 dark:text-white text-dark">
           <NavList activeNavItem={activeNavItem} onItemClick={handleItemClick} t={t} />
         </div>
       </div>
 
       {/* Nav Items - Mobile Dropdown */}
       {isOpen && (
-        <div className="flex flex-col items-center gap-4 mt-4 py-4 bg-slate-800 rounded-xl md:hidden animate-in fade-in zoom-in duration-200">
+        <div className="flex flex-col items-center gap-4 m-4 py-4 glass-card rounded-xl md:hidden animate-in fade-in zoom-in duration-200">
           <NavList activeNavItem={activeNavItem} onItemClick={handleItemClick} t={t} />
         </div>
       )}
