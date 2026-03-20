@@ -15,26 +15,26 @@ export default function Sidebar({}: Props) {
     <>
       <ProfileAvatar />
       <div className="static my-3 mt-9">
-        <h3 className="my-2 mt-4 text-5xl font-extrabold tracking-wider text-white font-inspiration">
+        <h3 className="my-2 mt-4 text-5xl font-extrabold tracking-wider text-muted-foreground font-inspiration">
           {locale === "jp" ? (
             <>
-              <span className="text-cyan-200 pb-2">{t("last_name")}</span>
+              <span className="text-foreground pb-2">{t("last_name")}</span>
               <br />
               <span> {t("first_name")}</span>
             </>
           ) : (
             <>
-              <span className="text-cyan-200 pb-2">{t("first_name")}</span>
+              <span className="text-foreground pb-2">{t("first_name")}</span>
               <br />
               <span>{t("last_name")}</span>
             </>
           )}
         </h3>
-        <p className="px-2 py-2 my-3 mt-6 bg-linear-to-r from-light-500 to-light-200 dark:from-zeit dark:to-zeit-200 rounded-full">
+        <p className="px-2 py-2 my-3 mt-6 glass-card text-foreground rounded-full">
           {t("work_title")}
         </p>
         <Link
-          className="flex items-center justify-center p-2 my-2 bg-linear-to-r from-light-500 to-light-200 dark:from-zeit dark:to-zeit-200 rounded-full"
+          className="flex items-center justify-center p-2 my-2 glass-card rounded-full hover:scale-105 duration-200 text-foreground"
           href="/assets/documents/Citizenship-Suzeet.jpg"
           download="CitizenResume-Suzeet.jpg"
         >

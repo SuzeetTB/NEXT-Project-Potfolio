@@ -45,6 +45,7 @@ const ThemeAndLanguageToggler = () => {
     <div className="flex items-center">
       <Space className="px-2 my-1 rounded-r-md rotate-0">
         <Switch
+          className="bg-foreground"
           checkedChildren={<FaSun className="mt-1" />}
           unCheckedChildren={<FaMoon />}
           onClick={changeTheme}
@@ -58,9 +59,9 @@ const ThemeAndLanguageToggler = () => {
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             backgroundColor: "transparent",
-            border:"1px var(--foreground)",
-            color:"var(--muted-foreground)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)"
+            border: "1px var(--foreground)",
+            color: "var(--muted-foreground)",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
           },
         }}
         placement="bottomLeft"

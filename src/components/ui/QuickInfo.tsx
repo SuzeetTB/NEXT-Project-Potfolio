@@ -8,7 +8,7 @@ export const QuickInfo = () => {
   return (
     <div
       id="quick-info"
-      className="py-4 my-3 text-white"
+      className="py-4 my-3 text-foreground"
       style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
     >
       <div>

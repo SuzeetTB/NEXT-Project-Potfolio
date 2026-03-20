@@ -34,15 +34,16 @@ const Index: FC = () => {
             <Sidebar />
           </div>
         )}
-        <p className="justify-around font-medium tracking-wider text-justify px-4">
+        <p className="justify-around md:font-medium tracking-wider text-justify px-4">
           {t("intro")}
-          <br /><br />
+          <br />
+          <br />
           {t("intro1")}
         </p>
         <MyTechStack />
         <MyExperience />
-        <GetInTouch/>
-        <FindMe/>
+        <GetInTouch />
+        <FindMe />
       </div>
     </motion.div>
   );
@@ -50,18 +51,6 @@ const Index: FC = () => {
 
 export default Index;
 
-// export const getServerSideProps = async (context: GetServerSideProps) => {
-//   const resData = await Axios.get(`/api/services`).then((res) => res.data);
-//   return {
-//     props: {
-//       services: resData.services,
-//     },
-//   };
-// };
-
-/*
- *Locale is passed as a prop to the component
- */
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {

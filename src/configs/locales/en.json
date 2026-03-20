@@ -31,6 +31,9 @@
     },
     "quick_links":"Quick Links",
     "contact":"Contact",
+    "email":"Email",
+    "phone":"Phone",
+    "location":"Location",
     "connect":"Connect With Me",
     "copyright":"All Rights Reserved",
     "built_on_stacks":"Built with Next.js, React & Tailwind CSS"

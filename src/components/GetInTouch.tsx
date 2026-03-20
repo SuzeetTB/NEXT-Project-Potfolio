@@ -10,8 +10,10 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 import { FaLocationDot, FaMessage } from "react-icons/fa6";
+import { useTranslations } from "next-intl";
 
 const GetInTouch = () => {
+  const t = useTranslations();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,18 +30,18 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className="py-6 max-w-7xl mx-auto w-full px-4 glass-card rounded-2xl shadow-sm">
+    <section className="py-6 max-w-7xl mx-auto w-full px-4">
       <div className="flex items-center gap-2 mb-4 text-2xl font-bold text-foreground">
         <FiMail />
         <h2>Get In Touch</h2>
       </div>
 
-      <div className="flex flex-1 gap-4 justify-between">
+      <div className="flex flex-col md:flex-row gap-4 justify-between">
         {/* Left: Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="lg:col-span-2 bg-foreground/20 p-8 rounded-xl shadow-lg w-4/6"
+          className="lg:col-span-2 glass-card p-8 rounded-xl shadow-lg md:w-4/6"
         >
           <h3 className="text-xl text-foreground font-semibold mb-2">
             Send Me a Message
@@ -50,7 +52,7 @@ const GetInTouch = () => {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-1">
+              <div className="gap-y-1">
                 <label className="text-base font-bold text-foreground">
                   Your Name
                 </label>
@@ -61,7 +63,7 @@ const GetInTouch = () => {
                   required
                 />
               </div>
-              <div className="space-y-1">
+              <div className="gap-y-1">
                 <label className="text-base font-bold text-foreground">
                   Email Address
                 </label>
@@ -74,7 +76,7 @@ const GetInTouch = () => {
               </div>
             </div>
 
-            <div className="space-y-1">
+            <div className="gap-y-1">
               <label className="text-base font-bold text-foreground uppercase">
                 Message
               </label>
@@ -87,7 +89,7 @@ const GetInTouch = () => {
 
             <button
               type="submit"
-              className="flex items-center gap-2 glass-card p-2 my-4 rounded-lg transition-colors font-medium text-foreground"
+              className="flex items-center gap-2 glass-card p-2 my-4 rounded-lg font-medium text-foreground hover:scale-105 duration-200 transform"
             >
               <FaMessage /> Send Message
             </button>
@@ -98,35 +100,38 @@ const GetInTouch = () => {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="glass-card text-white p-8 rounded-xl shadow-lg flex flex-col justify-between w-2/5"
+          className="bg-background/50 text-white p-8 rounded-xl shadow-lg flex flex-col justify-between md:w-2/5"
         >
-          <div className="space-y-6 text-foreground">
-            <h3 className="text-xl font-bold">Contact Information</h3>
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold">{t("contact")}</h3>
             <div className="flex items-start gap-4 py-3">
               <AiFillMail className="mt-1" />
               <div>
-                <p className="text-xs opacity-80 uppercase">Email</p>
-                <p className="font-medium">amitdhoju@gmail.com</p>
+                <p className="text-xs opacity-80 uppercase">{t("email")}</p>
+                <p className="font-medium">{t("profile.email")}</p>
               </div>
             </div>
             <div className="flex items-start gap-4 py-3">
               <AiFillPhone className="mt-1" />
               <div>
-                <p className="text-xs opacity-80 uppercase">Phone</p>
-                <p className="font-medium"> :977</p>
+                <p className="text-xs opacity-80 uppercase">{t("phone")}</p>
+                <p className="font-medium">{t("profile.phone")}</p>
               </div>
             </div>
             <div className="flex items-start gap-4 py-3">
               <FaLocationDot className="mt-1" />
               <div>
-                <p className="text-xs opacity-80 uppercase">Location</p>
-                <p className="font-medium">Bhaktapur, Nepal</p>
+                <p className="text-xs opacity-80 uppercase">{t("location")}</p>
+                <p className="font-medium">
+                  {t("profile.street_address")}-{t("profile.ward")},
+                  {t("profile.city")},{t("profile.country")}
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-teal-500 text-foreground">
-            <p className="text-sm font-bold mb-4">Connect With Me</p>
+          <div className="mt-8 pt-8 border-t border-teal-500 text-white">
+            <p className="text-sm font-bold mb-4">{t("connect")}</p>
             <div className="flex gap-4 text-xl">
               <a href="#" className="hover:text-teal-200 transition-colors">
                 <AiFillGithub />

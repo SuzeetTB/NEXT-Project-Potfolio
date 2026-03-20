@@ -21,7 +21,10 @@ export default function Profile({}: ProfileProps) {
         <SendMailButton />
       </div>
 
-      <div id="right-section" className="py-4 my-3 text-muted-foreground w-6/12">
+      <div
+        id="right-section"
+        className="py-4 my-3 text-muted-foreground w-6/12"
+      >
         <div id="name" className="my-3 mt-9">
           <h3 className="my-2 mt-4 text-5xl font-extrabold tracking-wider text-muted-foreground font-inspiration">
             {locale === "jp" ? (
@@ -47,7 +50,7 @@ export default function Profile({}: ProfileProps) {
             })}
           </h4>
           <Link
-            className="flex items-center justify-center p-2 my-2 glass-card rounded-full w-2/5 right-0 text-foreground"
+            className="flex items-center justify-center p-2 my-2 glass-card rounded-full w-2/5 right-0 text-foreground hover:scale-105 duration-200"
             href="/assets/documents/Citizenship-Suzeet.jpg"
             download="CitizenResume-Suzeet.jpg"
           >
