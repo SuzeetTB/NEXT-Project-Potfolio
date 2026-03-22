@@ -1,5 +1,5 @@
 import axios from "axios";
-import {domain} from "../configs/url";
+import {domain} from "@configs/url";
 
 axios.defaults.withCredentials = true;
 

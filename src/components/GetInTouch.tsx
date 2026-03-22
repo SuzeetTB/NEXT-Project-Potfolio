@@ -30,18 +30,18 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className="py-6 max-w-7xl mx-auto w-full px-4">
-      <div className="flex items-center gap-2 mb-4 text-2xl font-bold text-foreground">
+    <section className="py-6 max-w-7xl mx-auto w-full">
+      <div className="flex items-center gap-2 mb-4 text-2xl font-bold text-foreground px-4">
         <FiMail />
         <h2>Get In Touch</h2>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4 justify-between">
+      <div className="flex flex-col md:flex-row gap-4 justify-between px-2">
         {/* Left: Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="lg:col-span-2 glass-card p-8 rounded-xl shadow-lg md:w-4/6"
+          className="lg:col-span-2 glass-card p-8 rounded-xl shadow-lg md:w-4/6 hover:scale-101 duration-300"
         >
           <h3 className="text-xl text-foreground font-semibold mb-2">
             Send Me a Message
@@ -59,7 +59,7 @@ const GetInTouch = () => {
                 <input
                   type="text"
                   placeholder="Hari Bahadur"
-                  className="w-full p-2 rounded custom-tag-bg focus:ring-2 focus:ring-foreground outline-none"
+                  className="w-full p-2 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none"
                   required
                 />
               </div>
@@ -70,7 +70,7 @@ const GetInTouch = () => {
                 <input
                   type="email"
                   placeholder="hari@example.com"
-                  className="w-full p-2 rounded custom-tag-bg focus:ring-2 focus:ring-foreground outline-none"
+                  className="w-full p-2 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none"
                   required
                 />
               </div>
@@ -82,7 +82,7 @@ const GetInTouch = () => {
               </label>
               <textarea
                 rows={4}
-                className="w-full p-2 rounded custom-tag-bg focus:ring-2 focus:ring-foreground outline-none resize-none"
+                className="w-full p-2 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none resize-none"
                 placeholder="Tell me about your project..."
               ></textarea>
             </div>
@@ -100,7 +100,7 @@ const GetInTouch = () => {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="bg-background/50 text-white p-8 rounded-xl shadow-lg flex flex-col justify-between md:w-2/5"
+          className="bg-background/50 text-white p-8 rounded-xl shadow-lg flex flex-col justify-between md:w-2/5 hover:scale-101 duration-300"
         >
           <div className="space-y-6">
             <h3 className="text-xl font-bold">{t("contact")}</h3>

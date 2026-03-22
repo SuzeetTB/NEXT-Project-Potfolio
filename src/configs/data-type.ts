@@ -56,3 +56,13 @@ export interface ISkillGroup {
     category: string;
     Icon: any;
   }
+
+  export interface IAchievement {
+    id: number;
+    type: 'Award' | 'Certification';
+    title: string;
+    achievement: string;
+    location?: string; // Optional: Some entries don't have a distinct location string
+    date: string; // The specific year mentioned
+    description: string; // The explanatory text
+  }

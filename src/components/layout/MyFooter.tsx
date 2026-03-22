@@ -3,13 +3,11 @@ import {
   IoLocationOutline,
   IoMailOutline,
   IoCallOutline,
-  IoLinkOutline,
 } from "react-icons/io5";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { SiLeetcode, SiLinktree } from "react-icons/si";
 import { useLocale, useTranslations } from "next-intl";
-import { SocialLinks } from "../ui/SocialLinks";
-import { linkFB, linkGithub, linkLinkedIn } from "@/configs/url";
+import { linkGithub, linkLinkedIn } from "@/configs/url";
 
 const MyFooter: FC = () => {
   const locale = useLocale();

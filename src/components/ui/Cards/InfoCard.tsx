@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
-import { fadeInUp } from "../../utils/Animation";
-import useDeviceType from "@/hooks/useDeviceType";
-import { IExperience } from "@/configs/data-type";
+
+import { fadeInUp } from "@utils/Animation";
+import useDeviceType from "@hooks/useDeviceType";
+import { IExperience } from "@configs/data-type";
 
 const InfoCard: FC<{ exp: IExperience }> = ({
   exp: { Icon, role, id, title, image, description, location, date },

@@ -20,7 +20,7 @@ class MyDocument extends Document {
             content="react, node, python , rails, kotlin, freelancer, Full Stack developer "
           />
         </Head>
-        <body className="bg-gradient-to-r from-light-500 to-light-900 dark:from-zeit-950 dark:to-zeit">
+        <body className="custom-card-bg">
           <Main />
           <NextScript />
         </body>

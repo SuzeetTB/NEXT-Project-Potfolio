@@ -3,8 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
-import { IProject } from "../../configs/data-type";
-import { fadeInLeft, fadeInUp, stagger } from "../../utils/Animation";
+
+import { IProject } from "@configs/data-type";
+import { fadeInLeft, fadeInUp, stagger } from "@utils/Animation";
 
 const ProjectCard: React.FC<{
   project: IProject;
@@ -27,7 +28,7 @@ const ProjectCard: React.FC<{
 }) => {
   return (
     <motion.div
-      className="col-span-12 p-2 rounded bg-linear-to-r from-light-400 to-light-300 dark:from-zeit-950 dark:to-zeit-800 sm:col-span-6 lg:col-span-4"
+      className="col-span-12 p-2 rounded glass-card sm:col-span-6 lg:col-span-4"
       variants={fadeInUp}
     >
       <div className="px-1 my-2 overflow-auto ">
@@ -40,18 +41,18 @@ const ProjectCard: React.FC<{
             width={350}
             className="object-cover object-bottom w-full h-48 my-1 rounded-sm cursor-pointer"
           />
-          <div className="absolute bottom-0 left-0 right-0 z-10 flex items-end justify-center text-xl font-semibold duration-300 bg-gray-700 opacity-0 group-hover:opacity-90">
-            <h6 className="my-2 font-bold text-center text-zinc-100 dark:text-zinc-400">
+          <div className="absolute bottom-0 left-0 right-0 z-10 flex items-end justify-center text-xl font-semibold duration-300 opacity-0 group-hover:opacity-90 group-hover:bg-background">
+            <h6 className="my-2 font-bold text-center text-foreground ">
               {name}
             </h6>
           </div>
         </div>
-        <p className="justify-around mr-4 text-white">
+        <p className="justify-around mr-4 text-foreground">
           <span className="line-clamp-2">{description}</span>
           {/* <span className="ml-4 dark:text-zeit-100">{url_deployed}</span> */}
         </p>
         {projectSelected === id && (
-          <div className="absolute top-0 left-0 z-20 grid w-full text-white md:p-8 rounded-b-xl md:grid-cols-2 gap-x-12 bg-gradient-to-r from-black to-slate-800">
+          <div className="absolute top-1/5 left-0 z-20 grid w-full h-1/2 text-foreground md:p-8 rounded-b-xl md:grid-cols-2 gap-x-12 backdrop-blur-md glass-card bg-black/50">
             <motion.div
               className="p-4"
               variants={stagger}
@@ -68,7 +69,7 @@ const ProjectCard: React.FC<{
                 />
               </motion.div>
               <motion.div
-                className="flex justify-center my-4 space-x-3 text-white"
+                className="flex justify-center my-4 space-x-3 text-foreground"
                 variants={fadeInUp}
               >
                 <a

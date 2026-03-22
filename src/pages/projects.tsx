@@ -1,20 +1,21 @@
 import { motion } from "framer-motion";
 import React from "react";
-import ProjectsTabBar from "../components/ui/ProjectsTabBar";
-import ProjectCard from "../components/serviceCard/ProjectCard";
-import { projects as projectsCopy } from "../configs/data";
-import { Category } from "../configs/data-type";
-import { pageSwitchAnimation, stagger } from "../utils/Animation";
-import Head from "next/head";
-import { getI18nProps } from "@/lib/i18n";
 import { GetStaticProps } from "next/types";
+
+import ProjectsTabBar from "@components/ui/ProjectsTabBar";
+import ProjectCard from "@components/ui/Cards/ProjectCard";
+import { projects as projectsCopy } from "@configs/data";
+import { Category } from "@configs/data-type";
+import { pageSwitchAnimation, stagger } from "@utils/Animation";
+import { getI18nProps } from "@lib/i18n";
+import MyHeader from "@components/layout/MyHeader";
 type Props = {};
 
 const Projects = (props: Props) => {
   const [projects, setProjects] = React.useState(projectsCopy);
   const [activeTab, setActiveTab] = React.useState("all");
   const [projectSelected, setProjectSelected] = React.useState<number | null>(
-    null
+    null,
   );
   const handleFilterCategory = (category: Category | "all") => {
     if (category === "all") {
@@ -23,38 +24,25 @@ const Projects = (props: Props) => {
       return;
     }
     setProjects(
-      projectsCopy.filter((project) => project.category.includes(category))
+      projectsCopy.filter((project) => project.category.includes(category)),
     );
     setActiveTab(category);
   };
   return (
-    // overflow-y-scroll
     <motion.div
       variants={pageSwitchAnimation}
       initial="initial"
       animate="final"
       exit="exit"
-      className="px-5 py-2"
-      // style={{
-      //   height: "65vh",
-      // }}
+      className="px-5 py-2 mt-16"
     >
-      <Head>
-        <title>Suzeet Twanabasu | Projects</title>
-        <meta
-          name="description"
-          content="Full Stack Web Developer looking for job "
-        />
-      </Head>
+      <MyHeader subtitle={"Projects"} />
       <ProjectsTabBar
         handleFilterCategory={handleFilterCategory}
         active={activeTab as Category}
       />
       <motion.div
-        className="relative grid grid-cols-12 gap-4 my-3 overflow-auto"
-        style={{
-          height: "65vh",
-        }}
+        className="relative grid grid-cols-12 gap-4 my-3 overflow-auto py-8"
         variants={stagger}
         initial="initial"
         animate="final"
@@ -77,7 +65,7 @@ export default Projects;
 /*
  *Locale is passed as a prop to the component
  */
- export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await getI18nProps(locale || "en")),

@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import React from "react";
-import { pageSwitchAnimation } from "../utils/Animation";
 import Head from "next/head";
 import { GetStaticProps } from "next/types";
+
 import { getI18nProps } from "@/lib/i18n";
+import { pageSwitchAnimation } from "@utils/Animation";
+
 type Props = {};
 
 const Blogs = (props: Props) => {
@@ -42,7 +43,7 @@ export default Blogs;
 /*
  *Locale is passed as a prop to the component
  */
- export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await getI18nProps(locale || "en")),

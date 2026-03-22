@@ -1,69 +1,114 @@
-import React, { useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import Bar from "../components/ui/Bar";
-import EducationCard from "../components/serviceCard/EducationCard";
-import InfoCard from "../components/serviceCard/ServiceCard";
+import EducationCard from "../components/ui/Cards/EducationCard";
+import InfoCard from "../components/ui/Cards/InfoCard";
 import {
   academics,
   languages,
   tools,
-  experiences as AllServices,
   experiences,
+  trainingsAndParticipations,
 } from "../configs/data";
 import { motion } from "framer-motion";
-import { fadeInUp, pageSwitchAnimation } from "../utils/Animation";
+import { fadeInUp, stagger } from "../utils/Animation";
 import { GetStaticProps } from "next/types";
 import { getI18nProps } from "@/lib/i18n";
 import MyHeader from "@/components/layout/MyHeader";
 import { IExperience } from "@/configs/data-type";
-// type Props = {};
+import { Flex, Timeline } from "antd";
+import useDeviceType from "@/hooks/useDeviceType";
+import { useTranslations } from "next-intl";
+import MyAchievements from "@/components/MyAchievements";
 
-const Resume: React.FC = () => {
-  const [services, setServices] = React.useState<Array<IExperience>>();
+const Resume: FC = () => {
+  const { isMobile } = useDeviceType();
+  const t = useTranslations("about");
+  const [services, setServices] = useState<Array<IExperience>>();
   useEffect(() => {
     setServices(experiences.slice(0, 2));
   }, []);
 
   return (
-    <motion.div
-      className="px-2 py-4"
-      variants={pageSwitchAnimation}
-      initial="initial"
-      animate="final"
-      exit="exit"
-    >
-      <MyHeader subtitle={"Resume"}/>
+    <div>
+      <MyHeader subtitle={"Resume"} />
       {/* Experience and education */}
-      <div className="grid gap-6 lg:grid-cols-2 md:grid-cols-2">
+      <div className="flex flex-col gap-6 px-5 my-4 mt-16">
+        <motion.div variants={stagger} initial="initial" animate="final">
+          <h1 className="text-teal-600 dark:text-primary md:text-3xl md:font-extrabold text-lg text-center mt-8 my-4 font-bold">
+            Training & Participations
+          </h1>
+          <Timeline
+            className="ml-2 md:ml-8 w-auto"
+            mode={isMobile ? "left" : "alternate"} // Options: 'left', 'alternate', 'right'
+            variant="filled"
+            items={trainingsAndParticipations?.map((exp) => ({
+              // The label usually shows the date on the opposite side (if mode="alternate")
+              label: isMobile ? (
+                ""
+              ) : (
+                <span className="text-foreground font-mono">{exp.date}</span>
+              ),
+              dot: (
+                <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />
+              ),
+              tail: { style: { background: "white" } },
+              children: <InfoCard exp={exp} key={exp.id} />,
+            }))}
+          />
+        </motion.div>
+
         <motion.div
           className="p-5 text-white rounded-2xl"
           variants={fadeInUp}
           initial="initial"
           animate="final"
         >
-          <h5 className="text-2xl font-bold">Professional Experience</h5>
-          {/* <div>
-            <h5 className="text-xl font-bold">Work</h5>
-            <p className="text-xl font-semi-bold">Company Name</p>
-            <p className="my-3 text-xl font-inspiration">date</p>
-          </div> */}
-          {services?.map((service) => (
-            <InfoCard key={service.id} exp={service} />
-          ))}
+          <MyAchievements />
         </motion.div>
+
         <motion.div
           className="p-5 rounded-2xl"
           variants={fadeInUp}
           initial="initial"
           animate="final"
         >
-          <h5 className="text-2xl font-bold text-white">Education</h5>
-          {academics.map((academic) => (
-            <EducationCard academic={academic} key={academic.id} />
-          ))}
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-extrabold text-teal-600 dark:text-primary tracking-tight">
+              My Academics
+            </h2>
+            <p className="mt-2 text-lg text-gray-500 dark:text-muted-foreground">
+              Schools and Universities that I have graduated from.
+            </p>
+          </div>
+          <Flex vertical>
+            <Timeline
+              className="ml-2 md:ml-8 w-auto my-9"
+              mode={isMobile ? "left" : "alternate"} // Options: 'left', 'alternate', 'right'
+              variant="filled"
+              orientation="horizontal"
+              items={academics?.map((academic) => ({
+                // The label usually shows the date on the opposite side (if mode="alternate")
+                label: isMobile ? (
+                  ""
+                ) : (
+                  <span className="text-foreground font-mono">
+                    {academic.year}
+                  </span>
+                ),
+                dot: (
+                  <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />
+                ),
+                tail: { style: { background: "white" } },
+                children: (
+                  <EducationCard academic={academic} key={academic.id} />
+                ),
+              }))}
+            />
+          </Flex>
         </motion.div>
       </div>
       {/* Skills */}
-      <div className="gap-6 mt-6">
+      {/* <div className="gap-6 mt-6">
         <div className="grid gap-6 text-white lg:grid-cols-2 md:grid-cols-2">
           <div className="p-5 rounded-2xl">
             <h5 className="my-3 text-2xl font-bold">Languages & Frameworks</h5>
@@ -80,8 +125,8 @@ const Resume: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
-    </motion.div>
+      </div> */}
+    </div>
   );
 };
 
@@ -90,7 +135,7 @@ export default Resume;
 /*
  *Locale is passed as a prop to the component
  */
- export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await getI18nProps(locale || "en")),

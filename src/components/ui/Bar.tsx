@@ -1,8 +1,9 @@
-import React from "react";
-import { ISkill } from "../../configs/data-type";
+import { FC } from "react";
 import { motion, Variants } from "framer-motion";
 
-const Bar: React.FC<{ skillInfo: ISkill }> = ({
+import { ISkill } from "@configs/data-type";
+
+const Bar: FC<{ skillInfo: ISkill }> = ({
   skillInfo: { Icon, id, title, level },
   ...props
 }) => {
@@ -23,7 +24,7 @@ const Bar: React.FC<{ skillInfo: ISkill }> = ({
   return (
     <div className="flex my-2 text-white rounded-full dark:bg-slate-400 bg-slate-300">
       <motion.div
-        className="flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-light-500 to-light-300 dark:from-zeit dark:to-zeit-800"
+        className="flex items-center px-4 py-1 rounded-full custom-tag-bg"
         style={{ width: level }}
         variants={animate}
         initial="initial"

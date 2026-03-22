@@ -16,6 +16,9 @@ import {
   FaCloud,
   FaLayerGroup,
   FaDatabase,
+  FaGlobe,
+  FaLaptopCode,
+  FaUsers,
 } from "react-icons/fa6";
 import { RiComputerLine, RiDatabase2Line, RiSimCard2Line } from "react-icons/ri";
 import {
@@ -33,7 +36,7 @@ import {
   SiTailwindcss,
   SiTensorflow,
 } from "react-icons/si";
-import { IAcademics, IExperience, IProject, ISkill, ISkillGroup } from "./data-type";
+import { IAcademics, IAchievement, IExperience, IProject, ISkill, ISkillGroup } from "./data-type";
 
 export const experiences: Array<IExperience> = [
     {
@@ -165,35 +168,43 @@ export const tools: Array<ISkill> = [
 export const academics: Array<IAcademics> = [
   {
     id: 1,
-    organization: "Shintoshin Japanese Language Institute",
+    organization: "Shintoshin International Japanese Language Institute",
     image: "https://picsum.photos/200/300",
     degree: "Japanese Language",
-    year: "2023",
-    address: "Saitama, Japan",
+    year: "2021-2023",
+    address: "Soka, Saitama, Japan",
   },
   {
     id: 2,
     organization: "Glocal University",
     image: "https://picsum.photos/200/300",
-    degree: "B. Tech Computer Science and Engineering",
-    year: "2019",
-    address: "Dhapakhel, Lalitpur",
+    degree: "Bachelor in Technology (Computer Engineering)",
+    year: "2015-2019",
+    address: "Uttar Pradesh, India",
   },
   {
     id: 3,
-    organization: "Kanjirowa National Higher Secondary School",
+    organization: "Kantipur Engineering College",
     image: "https://picsum.photos/200/300",
-    degree: "HSEB(+2)",
-    year: "2014",
-    address: "Koteshwor, Kathmandu",
+    degree: "Bachelor in Computer Engineering",
+    year: "2014-2015",
+    address: "Lalitpur, Nepal (Dropped Out)",
   },
   {
     id: 4,
-    organization: "Himalayan English Secondary School",
+    organization: "Kanjirowa National H.S. School",
+    image: "https://picsum.photos/200/300",
+    degree: "HSEB (Science)",
+    year: "2012-2014",
+    address: "Kathmandu, Nepal",
+  },
+  {
+    id: 5,
+    organization: "Himalayan English Sec. School",
     image: "https://picsum.photos/200/300",
     degree: "SLC",
-    year: "2012",
-    address: "Dekocha, Bhaktapur",
+    year: "2000~2012",
+    address: "Bhaktapur, Nepal",
   },
 ];
 
@@ -518,5 +529,114 @@ export const skillGroups: ISkillGroup[] = [
         level: "75%",
       },
     ],
+  },
+];
+
+export const trainingsAndParticipations: Array<IExperience> = [
+  {
+    id: 1,
+    title: "Big Data Workshop",
+    role: "Participant",
+    location: "Pulchowk Campus, BECon 2k18-19",
+    date: "2018",
+    description: "2-day workshop at Pulchowk Campus providing practical insights on <b>Hadoop, HDFS, Flume,</b> and <b>Pig</b>.",
+    category: "Participation",
+    Icon: FaDatabase,
+    image: ""
+  },
+  {
+    id: 2,
+    title: "Student ICT Conference",
+    role: "Attendee",
+    location: "NCIT, Nepal",
+    date: "2018",
+    description: "Participated in the conference regarding the <b>digitization of Nepal</b>, organized by IT-S.",
+    category: "Participation",
+    Icon: FaUsers,
+    image: ""
+  },
+  {
+    id: 3,
+    title: "Yomari Code Camp",
+    role: "Developer",
+    location: "IT Meet, KU",
+    date: "January 2017",
+    description: "Built a <b>Unity project</b> for <b>earthquake emergency virtual practice</b> during the code camp.",
+    category: "Participation",
+    Icon: FaUnity,
+    image: ""
+  },
+  {
+    id: 4,
+    title: "Advanced Java",
+    role: "Web Development Training",
+    location: "Krustile Education and Technical Institute",
+    date: "2017",
+    description: "Advanced training in <b>Web Development</b> using <b>Java Spring Framework</b> and JSP.",
+    category: "Training",
+    Icon: FaCode,
+    image: ""
+  },
+  {
+    id: 5,
+    title: "Android Application Development",
+    role: "App Development Training",
+    location: "Krustile Education and Technical Institute",
+    date: "2016",
+    description: "Focused on <b>Android App Development</b> using Java and modern UI/UX designs.",
+    category: "Training",
+    Icon: FaAndroid,
+    image: ""
+  },
+  {
+    id: 6,
+    title: "Web Development Camp",
+    role: "Participant",
+    location: "MIC Nepal",
+    date: "December 14, 2014",
+    description: "Intensive camp focused on <b>Modern Web Development</b> technologies and industry standards.",
+    category: "Participation",
+    Icon: FaGlobe,
+    image: ""
+  },
+  {
+    id: 7,
+    title: "Web Designing",
+    role: "Front-End Training",
+    location: "Krustile Education and Technical Institute",
+    date: "2012",
+    description: "Foundational course covering <b>HTML, CSS, JS,</b> and <b>JQuery</b>.",
+    category: "Training",
+    Icon: FaLaptopCode,
+    image: ""
+  },
+];
+
+export const achievements: Array<IAchievement> = [
+  {
+    id: 1,
+    type: 'Certification',
+    title: 'Japanese Language Preparation Test',
+    achievement: 'JLPT N3 Certification',
+    date: '2023',
+    description: "Successfully passed the Japanese Language Preparation Test 2023 at the N3 proficiency level.",
+  },
+  {
+    id: 2,
+    type: 'Award',
+    title: 'KU IT Meet',
+    achievement: 'Best Idea Category Award',
+    location: 'Yomari Code Camp',
+    date: '2017',
+    description: "Awarded for the virtual practice application designed to cope with natural disasters with safety measures.",
+  },
+  {
+    id: 3,
+    type: 'Award',
+    title: 'Ace Kaleidoscope',
+    achievement: 'Digital Ad Winner Award',
+    location: 'Digital Ad Competition',
+    date: '2014',
+    description: "Winner of the award for creating a 100-second length video depicting an ad for an educational website.",
   },
 ];

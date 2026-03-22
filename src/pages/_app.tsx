@@ -1,11 +1,12 @@
 import { ThemeProvider } from "next-themes";
 import { QueryClient, QueryClientProvider } from "react-query";
-import MyNavbar from "@/components/layout/MyNavBar";
-import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { NextIntlClientProvider } from "next-intl";
 import { AppProps } from "next/app";
-import MyFooter from "@/components/layout/MyFooter";
+
+import MyFooter from "@components/layout/MyFooter";
+import MyNavbar from "@components/layout/MyNavBar";
+import "@styles/globals.css";
 
 const queryClient = new QueryClient();
 

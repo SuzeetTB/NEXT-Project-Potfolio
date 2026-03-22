@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import ThemeAndLanguageToggler from "../ui/ThemeAndLanguageToggler";
-import { Divider } from "antd";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NavItem: FC<{
@@ -45,7 +44,7 @@ const MyNavbar = () => {
       <div className="flex justify-between items-center px-5 py-3 max-w-7xl mx-auto">
         <div className="flex flex-row">
           <Image
-            src="/assets/images/image.png"
+            src="/assets/images/my_logo.png"
             alt="profile-avatar"
             height={28}
             width={32}

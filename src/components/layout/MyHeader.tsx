@@ -12,7 +12,7 @@ export default function MyHeader({ title, subtitle }: HeaderProps) {
       <title>
         {title ?? "Suzeet Twanabasu"} | {subtitle ?? "Full Stack Developer"}
       </title>
-      <link rel="icon" href="assets/images/image.png" type="image/png"></link>
+      <link rel="icon" href="assets/images/my_logo.png" type="image/png"></link>
       <meta
         name="description"
         content= {title ?? "Full Stack Web Developer hunting for job"}

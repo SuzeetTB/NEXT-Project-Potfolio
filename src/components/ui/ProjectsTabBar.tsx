@@ -1,18 +1,19 @@
-import React from "react";
-import { Category } from "../../configs/data-type";
+import { FC } from "react";
 
-const TabItem: React.FC<{
+import { Category } from "@configs/data-type";
+
+const TabItem: FC<{
   tab: Category | "all";
   handleFilterCategory: Function;
   active: Category | "all";
 }> = ({ tab, handleFilterCategory, active }) => {
   let className =
-    "capitalize cursor-pointer hover:text-light-900 hover:dark:text-zeit-100";
+    "capitalize cursor-pointer hover:text-background";
   if (active === tab) {
     className +=
-      " text-light-900 dark:text-zeit-100 bg-gray-100 px-2 rounded-lg";
+      " text-white bg-foreground px-2 rounded-lg";
   } else {
-    className += " text-white";
+    className += " text-muted-foreground";
   }
   return (
     <li className={className} onClick={() => handleFilterCategory(tab)}>
@@ -21,7 +22,7 @@ const TabItem: React.FC<{
   );
 };
 
-const ProjectsTabBar: React.FC<{
+const ProjectsTabBar: FC<{
   handleFilterCategory: Function;
   active: Category;
 }> = (props) => {

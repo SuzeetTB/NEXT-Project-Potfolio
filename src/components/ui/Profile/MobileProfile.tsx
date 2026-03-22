@@ -1,10 +1,11 @@
 import { ImProfile } from "react-icons/im";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import { SocialLinks } from "../ui/SocialLinks";
-import { SendMailButton } from "../ui/SendMailButton";
-import { QuickInfo } from "../ui/QuickInfo";
-import { ProfileAvatar } from "../ui/ProfileAvatar";
+import { SocialLinks } from "../SocialLinks";
+import { SendMailButton } from "../SendMailButton";
+import { QuickInfo } from "../QuickInfo";
+import { ProfileAvatar } from "../ProfileAvatar";
+import { FaDownload } from "react-icons/fa6";
 
 type Props = {};
 
@@ -34,11 +35,22 @@ export default function Sidebar({}: Props) {
           {t("work_title")}
         </p>
         <Link
-          className="flex items-center justify-center p-2 my-2 glass-card rounded-full hover:scale-105 duration-200 text-foreground"
-          href="/assets/documents/Citizenship-Suzeet.jpg"
-          download="CitizenResume-Suzeet.jpg"
+          className="flex items-center justify-center p-2 my-2 glass-card rounded-full w-2/5 right-0 text-foreground hover:scale-105 duration-200"
+          // Use encodeURI for the path, but keep the download name as is
+          href={
+            locale === "jp"
+              ? encodeURI("/assets/documents/履歴書－トナバス-スジト.pdf")
+              : encodeURI("/assets/documents/Resume-Suzeet Twanabasu.pdf")
+          }
+          download={
+            locale === "jp"
+              ? "履歴書－トナバス-スジト.pdf"
+              : "Resume-Suzeet Twanabasu.pdf"
+          }
+          target="_blank" // Adding this helps trigger the download action better
+          rel="noopener noreferrer"
         >
-          <ImProfile className="w-6 h-6 mr-2" /> {t("btn_download_resume")}
+          <FaDownload className="w-6 h-6 mr-2" /> {t("btn_download_resume")}
         </Link>
       </div>
       <SocialLinks />

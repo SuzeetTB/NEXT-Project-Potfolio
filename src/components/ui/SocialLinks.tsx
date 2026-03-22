@@ -4,7 +4,7 @@ import {
   linkLinkedIn,
   linkGithub,
   linkYoutube,
-} from "@/configs/url";
+} from "@configs/url";
 import Link from "next/link";
 import {
   AiOutlineFacebook,

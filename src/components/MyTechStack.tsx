@@ -1,5 +1,5 @@
-import { skillGroups } from "@/configs/data";
-import { fadeInUp } from "@/utils/Animation";
+import { skillGroups } from "@configs/data";
+import { fadeInUp } from "@utils/Animation";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
