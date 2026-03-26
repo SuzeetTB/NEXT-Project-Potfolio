@@ -8,6 +8,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { SiLeetcode, SiLinktree } from "react-icons/si";
 import { useLocale, useTranslations } from "next-intl";
 import { linkGithub, linkLinkedIn } from "@/configs/url";
+import Link from "next/link";
 
 const MyFooter: FC = () => {
   const locale = useLocale();
@@ -49,20 +50,30 @@ const MyFooter: FC = () => {
           <div className="flex flex-col gap-y-4 text-foreground">
             <h3 className="text-xl font-bold">{t("quick_links")}</h3>
             <ul className="flex flex-col gap-y-2">
-              {[
-                "About",
-                "Skills",
-                "Experience",
-                "Projects",
-                "Certifications",
-                "Achievements",
-              ].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className={linkItemStyle}>
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <Link href={`/`} className={linkItemStyle}>
+                <li key={'about'} />
+                {t('navbar.about')}
+              </Link>
+              <Link href={`/#skills`} className={linkItemStyle}>
+                <li key={'skills'} />
+                {t('navbar.skills')}
+              </Link>
+              <Link href={`/#experience`} className={linkItemStyle}>
+                <li key={'experience'} />
+                {t('navbar.experience')}
+              </Link>
+              <Link href={`/projects`} className={linkItemStyle}>
+                <li key={'projects'} />
+                {t('navbar.projects')}
+              </Link>
+              <Link href={`/resume#participations`} className={linkItemStyle}>
+                <li key={'participations'} />
+                {t('navbar.participations')}
+              </Link>
+              <Link href={`/resume#achievements`} className={linkItemStyle}>
+                <li key={'achievements'} />
+                {t('navbar.achievements')}
+              </Link>
             </ul>
           </div>
 
@@ -117,12 +128,16 @@ const MyFooter: FC = () => {
             © {currentYear}{" "}
             {locale === "jp" ? (
               <>
-                <span className="text-foreground ">{t("profile.last_name")}</span>
+                <span className="text-foreground ">
+                  {t("profile.last_name")}
+                </span>
                 <span> {t("profile.first_name")}</span>
               </>
             ) : (
               <>
-                <span className="text-foreground">{t("profile.first_name")}</span>{" "}
+                <span className="text-foreground">
+                  {t("profile.first_name")}
+                </span>{" "}
                 <span>{t("profile.last_name")}</span>
               </>
             )}{" "}

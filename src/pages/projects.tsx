@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import { useState } from "react";
 import { GetStaticProps } from "next/types";
 
 import ProjectsTabBar from "@components/ui/ProjectsTabBar";
@@ -9,14 +9,15 @@ import { Category } from "@configs/data-type";
 import { pageSwitchAnimation, stagger } from "@utils/Animation";
 import { getI18nProps } from "@lib/i18n";
 import MyHeader from "@components/layout/MyHeader";
+import { useTranslations } from "use-intl";
+
 type Props = {};
 
 const Projects = (props: Props) => {
-  const [projects, setProjects] = React.useState(projectsCopy);
-  const [activeTab, setActiveTab] = React.useState("all");
-  const [projectSelected, setProjectSelected] = React.useState<number | null>(
-    null,
-  );
+  
+  const [projects, setProjects] = useState(projectsCopy);
+  const [activeTab, setActiveTab] = useState("all");
+  const [projectSelected, setProjectSelected] = useState<number | null>(null);
   const handleFilterCategory = (category: Category | "all") => {
     if (category === "all") {
       setProjects(projectsCopy);

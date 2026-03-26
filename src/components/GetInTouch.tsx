@@ -33,7 +33,7 @@ const GetInTouch = () => {
     <section className="py-6 max-w-7xl mx-auto w-full">
       <div className="flex items-center gap-2 mb-4 text-2xl font-bold text-foreground px-4">
         <FiMail />
-        <h2>Get In Touch</h2>
+        <h2>{t("get_in_touch.title")}</h2>
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 justify-between px-2">
@@ -44,45 +44,45 @@ const GetInTouch = () => {
           className="lg:col-span-2 glass-card p-8 rounded-xl shadow-lg md:w-4/6 hover:scale-101 duration-300"
         >
           <h3 className="text-xl text-foreground font-semibold mb-2">
-            Send Me a Message
+          {t("get_in_touch.send_me_a_message")}
           </h3>
           <p className="text-muted-foreground mb-6 text-sm">
-            Have a project in mind? Fill out the form below.
+          {t("get_in_touch.send_me_a_message_subtitle")}
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="gap-y-1">
                 <label className="text-base font-bold text-foreground">
-                  Your Name
+                {t("get_in_touch.your_name")}
                 </label>
                 <input
                   type="text"
                   placeholder="Hari Bahadur"
-                  className="w-full p-2 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none"
+                  className="w-full p-2 my-1 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none"
                   required
                 />
               </div>
               <div className="gap-y-1">
                 <label className="text-base font-bold text-foreground">
-                  Email Address
+                  {t("get_in_touch.your_email_address")}
                 </label>
                 <input
                   type="email"
                   placeholder="hari@example.com"
-                  className="w-full p-2 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none"
+                  className="w-full p-2 my-1 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none"
                   required
                 />
               </div>
             </div>
 
-            <div className="gap-y-1">
+            <div className="gap-y-1 my-3">
               <label className="text-base font-bold text-foreground uppercase">
-                Message
+                {t("get_in_touch.your_message")}
               </label>
               <textarea
                 rows={4}
-                className="w-full p-2 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none resize-none"
+                className="w-full p-2 my-1 rounded shadow text-black bg-gray-50 focus:ring-2 focus:ring-foreground outline-none resize-none"
                 placeholder="Tell me about your project..."
               ></textarea>
             </div>
@@ -91,7 +91,7 @@ const GetInTouch = () => {
               type="submit"
               className="flex items-center gap-2 glass-card p-2 my-4 rounded-lg font-medium text-foreground hover:scale-105 duration-200 transform"
             >
-              <FaMessage /> Send Message
+              <FaMessage /> {t("get_in_touch.send_message_button")}
             </button>
           </form>
         </motion.div>

@@ -4,13 +4,11 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 export const MyTechStack = () => {
-  const t = useTranslations("about");
+  const t = useTranslations();
   return (
-    <div
-      className="grow p-4 mt-5"
-    >
+    <div id="skills" className="grow p-4 mt-5">
       <h5 className="my-3 text-2xl font-bold tracking-wider text-foreground">
-        {t("tech_stack_title")}
+        {t("about.tech_stack_title")}
       </h5>
       <motion.div variants={fadeInUp} initial="initial" animate="final">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -29,7 +27,7 @@ export const MyTechStack = () => {
 
                 {/* Category Title */}
                 <h3 className="text-lg md:text-xl font-semibold text-center md:text-left mb-8 text-foreground">
-                  {group.category}
+                  {t(group.category)}
                 </h3>
               </div>
 

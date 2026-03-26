@@ -20,7 +20,11 @@ import {
   FaLaptopCode,
   FaUsers,
 } from "react-icons/fa6";
-import { RiComputerLine, RiDatabase2Line, RiSimCard2Line } from "react-icons/ri";
+import {
+  RiComputerLine,
+  RiDatabase2Line,
+  RiSimCard2Line,
+} from "react-icons/ri";
 import {
   SiCplusplus,
   SiDjango,
@@ -36,58 +40,61 @@ import {
   SiTailwindcss,
   SiTensorflow,
 } from "react-icons/si";
-import { IAcademics, IAchievement, IExperience, IProject, ISkill, ISkillGroup } from "./data-type";
+import {
+  IAcademics,
+  IAchievement,
+  IExperience,
+  IProject,
+  ISkill,
+  ISkillGroup,
+} from "./data-type";
 
 export const experiences: Array<IExperience> = [
-    {
-      id: 1,
-      title: "MeroParty",
-      role: "Front-End Engineer",
-      location: "Bhaktapur, Nepal",
-      date: "August 2024 - Present",
-      description:
-        "Built a <em>Venue Management Tool</em> using <b>Node.js</b> and <b>React</b>. Developed web and app interfaces for venue-side management and mentored junior developers.",
-      image: "https://meroparty.com/assets/mero-party-logo-y-470e799b.avif",
-      category: "Development",
-      Icon: FaHotel,
-    },
-    {
-      id: 2,
-      title: "ICC Communications",
-      role: "Sales/Marketing",
-      location: "Ueno, Japan",
-      date: "December 2023 - August 2024",
-      description:
-        "Leveraged multilingual skills (<b>English, Nepali, Japanese</b>) to engage diverse customers. Increased <em>SIM card</em> and mobile phone sales through effective support.",
-      image: "https://picsum.photos/200/300", // Replace with ICC logo if available
-      category: "Sales & Support",
-      Icon: RiSimCard2Line,
-    },
-    {
-      id: 3,
-      title: "Axios Softworks",
-      role: "Full Stack Developer",
-      location: "Banepa, Nepal",
-      date: "April 2021 - April 2022",
-      description:
-        "Developed web applications using <b>Node.js</b>, <b>React</b>, and <b>Ruby on Rails</b> for projects like <em>NIVID School Management</em>. Contributed to an Android app using <b>Kotlin</b>.",
-      image: "https://picsum.photos/200/301",
-      category: "Development",
-      Icon: RiComputerLine,
-    },
-    {
-      id: 4,
-      title: "Cloud Factory",
-      role: "Data Entry/Image Training",
-      location: "Bhaisepati, Nepal",
-      date: "September 2019 - May 2022",
-      description:
-        "Collected and annotated image data using proprietary tools for <b>AI model training</b> and data processing.",
-      image: "https://picsum.photos/200/302",
-      category: "Data Science",
-      Icon: RiDatabase2Line,
-    },
-  ];
+  {
+    id: 1,
+    title: "experience.meroparty.title",
+    role: "experience.meroparty.role",
+    location: "experience.meroparty.location",
+    date: "experience.meroparty.date",
+    description: "experience.meroparty.description",
+    image: "https://meroparty.com/assets/mero-party-logo-y-470e799b.avif",
+    category: "Development",
+    Icon: FaHotel,
+  },
+  {
+    id: 2,
+    title: "experience.icc.title",
+    role: "experience.icc.role",
+    location: "experience.icc.location",
+    date: "experience.icc.date",
+    description: "experience.icc.description",
+    image: "https://picsum.photos/200/300", // Replace with ICC logo if available
+    category: "Sales & Support",
+    Icon: RiSimCard2Line,
+  },
+  {
+    id: 3,
+    title: "experience.axiosSoftworks.title",
+    role: "experience.axiosSoftworks.role",
+    location: "experience.axiosSoftworks.location",
+    date: "experience.axiosSoftworks.date",
+    description: "experience.axiosSoftworks.description",
+    image: "https://picsum.photos/200/301",
+    category: "Development",
+    Icon: RiComputerLine,
+  },
+  {
+    id: 4,
+    title: "experience.cloudFactory.title",
+    role: "experience.cloudFactory.role",
+    location: "experience.cloudFactory.location",
+    date: "experience.cloudFactory.date",
+    description: "experience.cloudFactory.description",
+    image: "https://picsum.photos/200/302",
+    category: "Data Science",
+    Icon: RiDatabase2Line,
+  },
+];
 
 export const languages: Array<ISkill> = [
   {
@@ -168,54 +175,53 @@ export const tools: Array<ISkill> = [
 export const academics: Array<IAcademics> = [
   {
     id: 1,
-    organization: "Shintoshin International Japanese Language Institute",
+    organization: "academics.sijli.title",
     image: "https://picsum.photos/200/300",
-    degree: "Japanese Language",
+    degree: "academics.sijli.degree",
     year: "2021-2023",
-    address: "Soka, Saitama, Japan",
+    address: "academics.sijli.address",
   },
   {
     id: 2,
-    organization: "Glocal University",
+    organization: "academics.glocal.title",
     image: "https://picsum.photos/200/300",
-    degree: "Bachelor in Technology (Computer Engineering)",
+    degree: "academics.glocal.degree",
     year: "2015-2019",
-    address: "Uttar Pradesh, India",
+    address: "academics.glocal.address",
   },
   {
     id: 3,
-    organization: "Kantipur Engineering College",
+    organization: "academics.kantipur.title",
     image: "https://picsum.photos/200/300",
-    degree: "Bachelor in Computer Engineering",
+    degree: "academics.kantipur.degree",
     year: "2014-2015",
-    address: "Lalitpur, Nepal (Dropped Out)",
+    address: "academics.kantipur.address",
   },
   {
     id: 4,
-    organization: "Kanjirowa National H.S. School",
+    organization: "academics.kanjirowa.title",
     image: "https://picsum.photos/200/300",
-    degree: "HSEB (Science)",
+    degree: "academics.kanjirowa.degree",
     year: "2012-2014",
-    address: "Kathmandu, Nepal",
+    address: "academics.kanjirowa.address",
   },
   {
     id: 5,
-    organization: "Himalayan English Sec. School",
+    organization: "academics.himalayan.title",
     image: "https://picsum.photos/200/300",
-    degree: "SLC",
+    degree: "academics.himalayan.degree",
     year: "2000~2012",
-    address: "Bhaktapur, Nepal",
+    address: "academics.himalayan.address",
   },
 ];
 
 export const projects: Array<IProject> = [
   {
     id: 1,
-    name: "Z Blog",
-    description:
-      "A blogging type simple CMS web project, Build with Node Js at backend and handbrake template engine, pagination.",
+    name: "projects.zBlog.title",
+    description: "projects.zBlog.description",
     image: "https://picsum.photos/200/300",
-    category: ["node", "mongodb"],
+    category: ["node", "mongodb", "all"],
     url_deployed: "https://warm-journey-16132.herokuapp.com/",
     url_github: "https://www.google.com",
     key_features: [
@@ -229,11 +235,10 @@ export const projects: Array<IProject> = [
   },
   {
     id: 2,
-    name: "Zeitsu E-trade",
-    description:
-      "An e-commerce web project for product sale, Build with Laravel at backend and Blade template engine, Cart system, toastr notification, Product pagination, Session  and cart checkout using Stripe.",
+    name: "projects.zeitsuETrade.title",
+    description: "projects.zeitsuETrade.description",
     image: "https://picsum.photos/200/300",
-    category: ["laravel", "php"],
+    category: ["laravel", "php", "all"],
     url_deployed: "https://zeitsuetrade.000webhostapp.com",
     url_github: "https://www.google.com",
     key_features: [
@@ -246,9 +251,8 @@ export const projects: Array<IProject> = [
   },
   {
     id: 3,
-    name: "Gesture Based Cursor Control",
-    description:
-      "A python based application which uses a web camera to capture image of hand and control the mouse events such as click, scroll, based on the gestures performed using the hand.",
+    name: "projects.gbcc.title",
+    description: "projects.gbcc.description",
     image: "/assets/images/projects/gbmc.png",
     category: ["python"],
     url_deployed: "https://www.google.com",
@@ -257,9 +261,8 @@ export const projects: Array<IProject> = [
   },
   {
     id: 4,
-    name: "Virtual KEC",
-    description:
-      "A 3D model-based application to provide user an experience of viewing academic buildings, laboratory buildings of KEC College in virtually designed 3D space with the aim of familiarizing the college compound to new prospects.",
+    name: "projects.vKec.title",
+    description: "projects.vKec.description",
     image: "https://picsum.photos/200/300",
     category: ["javascript", "c#"],
     url_deployed: "https://www.google.com",
@@ -273,9 +276,8 @@ export const projects: Array<IProject> = [
   },
   {
     id: 5,
-    name: "Runner Runner",
-    description:
-      "A simple graphics-based gaming application with 2D drawings, art and animations implementing a continuous loop of animation, plot positions-based collider functions, score points based on duration of survival and double buffering for smooth operation.",
+    name: "projects.runner.title",
+    description: "projects.runner.description",
     image: "https://picsum.photos/200/300",
     category: ["c++"],
     url_deployed: "https://www.google.com",
@@ -284,9 +286,8 @@ export const projects: Array<IProject> = [
   },
   {
     id: 6,
-    name: "Company Database",
-    description:
-      "Employee Management System project built to manage employee details and records of an organization or company. It uses CRUD operations with authentication and authorization.",
+    name: "projects.companyDB.title",
+    description: "projects.companyDB.description",
     image: "https://picsum.photos/200/300",
     category: ["c++"],
     url_deployed: "https://www.google.com",
@@ -295,31 +296,29 @@ export const projects: Array<IProject> = [
   },
   {
     id: 7,
-    name: "Plustwonotes.com",
-    description:
-      "Plustwonotes is an educational website to share and post educational material of grade 11 and 12. I worked as a web designer, Content Creator and manager. The site hosted for 3 years.",
+    name: "projects.plustwonotes.title",
+    description: "projects.plustwonotes.description",
     image: "/assets/images/projects/plus2notes.png",
-    category: ["c++"],
+    category: ["laravel", "vue", "all"],
     url_deployed: "https://www.google.com",
     url_github: "https://www.google.com",
-    key_features: ["CodeBlocks", "C++", "graphics.h"],
+    key_features: ["Laravel", "PHP", "stripe"],
   },
   {
     id: 8,
-    name: "Meroparty.com",
-    description:
-      "Meroparty is an event/venue management and e-commerce website to view and compare event venues and also manage the venues like bookings, halls, invoices. I worked as a web designer, full-stack developer. The site hosted from 2024.",
+    name: "projects.meroparty.title",
+    description: "projects.meroparty.description",
     image: "/assets/images/projects/meroparty.png",
-    category: ["c++"],
-    url_deployed: "https://www.google.com",
-    url_github: "https://www.google.com",
-    key_features: ["CodeBlocks", "C++", "graphics.h"],
+    category: ["typescript", "react", "javascript", "all"],
+    url_deployed: "https://www.meroparty.com",
+    url_github: "https://www.meroparty.com",
+    key_features: ["React", "TypeScript", "Vite", "React", "FramerMotion"],
   },
 ];
 
 export const skillGroups: ISkillGroup[] = [
   {
-    category: "Programming & Scripting Languages",
+    category: "skillGroups.programming",
     Icon: FaCode,
     skills: [
       {
@@ -367,7 +366,7 @@ export const skillGroups: ISkillGroup[] = [
     ],
   },
   {
-    category: "Full-Stack Development",
+    category: "skillGroups.fullStack",
     Icon: FaLayerGroup,
     skills: [
       {
@@ -422,7 +421,7 @@ export const skillGroups: ISkillGroup[] = [
     ],
   },
   {
-    category: "Cloud & DevOps",
+    category: "skillGroups.devOps",
     Icon: FaCloud,
     skills: [
       { id: 14, title: "AWS", category: "Cloud", Icon: FaAws, level: "65%" },
@@ -450,7 +449,7 @@ export const skillGroups: ISkillGroup[] = [
     ],
   },
   {
-    category: "Data & Databases",
+    category: "skillGroups.database",
     Icon: FaDatabase,
     skills: [
       {
@@ -477,7 +476,7 @@ export const skillGroups: ISkillGroup[] = [
     ],
   },
   {
-    category: "UI/UX & Design",
+    category: "skillGroups.uiux",
     Icon: FaDatabase,
     skills: [
       {
@@ -511,7 +510,7 @@ export const skillGroups: ISkillGroup[] = [
     ],
   },
   {
-    category: "Data Science & ML ",
+    category: "skillGroups.machineLearning",
     Icon: FaDatabase,
     skills: [
       {
@@ -535,108 +534,108 @@ export const skillGroups: ISkillGroup[] = [
 export const trainingsAndParticipations: Array<IExperience> = [
   {
     id: 1,
-    title: "Big Data Workshop",
-    role: "Participant",
-    location: "Pulchowk Campus, BECon 2k18-19",
-    date: "2018",
-    description: "2-day workshop at Pulchowk Campus providing practical insights on <b>Hadoop, HDFS, Flume,</b> and <b>Pig</b>.",
+    title: "trainingsAndParticipations.bigData.title",
+    role: "trainingsAndParticipations.bigData.role",
+    location: "trainingsAndParticipations.bigData.location",
+    date: "trainingsAndParticipations.bigData.date",
+    description: "trainingsAndParticipations.bigData.description",
     category: "Participation",
     Icon: FaDatabase,
-    image: ""
+    image: "",
   },
   {
     id: 2,
-    title: "Student ICT Conference",
-    role: "Attendee",
-    location: "NCIT, Nepal",
-    date: "2018",
-    description: "Participated in the conference regarding the <b>digitization of Nepal</b>, organized by IT-S.",
+    title: "trainingsAndParticipations.studentICT.title",
+    role: "trainingsAndParticipations.studentICT.role",
+    location: "trainingsAndParticipations.studentICT.location",
+    date: "trainingsAndParticipations.studentICT.date",
+    description: "trainingsAndParticipations.studentICT.description",
     category: "Participation",
     Icon: FaUsers,
-    image: ""
+    image: "",
   },
   {
     id: 3,
-    title: "Yomari Code Camp",
-    role: "Developer",
-    location: "IT Meet, KU",
-    date: "January 2017",
-    description: "Built a <b>Unity project</b> for <b>earthquake emergency virtual practice</b> during the code camp.",
+    title: "trainingsAndParticipations.yCC.title",
+    role: "trainingsAndParticipations.yCC.role",
+    location: "trainingsAndParticipations.yCC.location",
+    date: "trainingsAndParticipations.yCC.date",
+    description: "trainingsAndParticipations.yCC.description",
     category: "Participation",
     Icon: FaUnity,
-    image: ""
+    image: "",
   },
   {
     id: 4,
-    title: "Advanced Java",
-    role: "Web Development Training",
-    location: "Krustile Education and Technical Institute",
-    date: "2017",
-    description: "Advanced training in <b>Web Development</b> using <b>Java Spring Framework</b> and JSP.",
+    title: "trainingsAndParticipations.advJava.title",
+    role: "trainingsAndParticipations.advJava.role",
+    location: "trainingsAndParticipations.advJava.location",
+    date: "trainingsAndParticipations.advJava.date",
+    description: "trainingsAndParticipations.advJava.description",
     category: "Training",
     Icon: FaCode,
-    image: ""
+    image: "",
   },
   {
     id: 5,
-    title: "Android Application Development",
-    role: "App Development Training",
-    location: "Krustile Education and Technical Institute",
-    date: "2016",
-    description: "Focused on <b>Android App Development</b> using Java and modern UI/UX designs.",
+    title: "trainingsAndParticipations.androidDev.title",
+    role: "trainingsAndParticipations.androidDev.role",
+    location: "trainingsAndParticipations.androidDev.location",
+    date: "trainingsAndParticipations.androidDev.date",
+    description: "trainingsAndParticipations.androidDev.description",
     category: "Training",
     Icon: FaAndroid,
-    image: ""
+    image: "",
   },
   {
     id: 6,
-    title: "Web Development Camp",
-    role: "Participant",
-    location: "MIC Nepal",
-    date: "December 14, 2014",
-    description: "Intensive camp focused on <b>Modern Web Development</b> technologies and industry standards.",
+    title: "trainingsAndParticipations.webDevCamp.title",
+    role: "trainingsAndParticipations.webDevCamp.role",
+    location: "trainingsAndParticipations.webDevCamp.location",
+    date: "trainingsAndParticipations.webDevCamp.date",
+    description: "trainingsAndParticipations.webDevCamp.description",
     category: "Participation",
     Icon: FaGlobe,
-    image: ""
+    image: "",
   },
   {
     id: 7,
-    title: "Web Designing",
-    role: "Front-End Training",
-    location: "Krustile Education and Technical Institute",
-    date: "2012",
-    description: "Foundational course covering <b>HTML, CSS, JS,</b> and <b>JQuery</b>.",
+    title: "trainingsAndParticipations.krustile.title",
+    role: "trainingsAndParticipations.krustile.role",
+    location: "trainingsAndParticipations.krustile.location",
+    date: "trainingsAndParticipations.krustile.date",
+    description: "trainingsAndParticipations.krustile.description",
     category: "Training",
     Icon: FaLaptopCode,
-    image: ""
+    image: "",
   },
 ];
 
 export const achievements: Array<IAchievement> = [
   {
     id: 1,
-    type: 'Certification',
-    title: 'Japanese Language Preparation Test',
-    achievement: 'JLPT N3 Certification',
-    date: '2023',
-    description: "Successfully passed the Japanese Language Preparation Test 2023 at the N3 proficiency level.",
+    type: "Certification",
+    date: "2023",
+    title: "achievements.jlpt.title",
+    achievement: "achievements.jlpt.achievement",
+    description: "achievements.jlpt.description",
   },
   {
     id: 2,
-    type: 'Award',
-    title: 'KU IT Meet',
-    achievement: 'Best Idea Category Award',
-    location: 'Yomari Code Camp',
-    date: '2017',
-    description: "Awarded for the virtual practice application designed to cope with natural disasters with safety measures.",
+    type: "Award",
+    date: "2017",
+    title: "achievements.yCC.title",
+    achievement: "achievements.yCC.achievement",
+    description: "achievements.yCC.description",
+    location: "achievements.yCC.description",
   },
   {
     id: 3,
-    type: 'Award',
-    title: 'Ace Kaleidoscope',
-    achievement: 'Digital Ad Winner Award',
-    location: 'Digital Ad Competition',
-    date: '2014',
-    description: "Winner of the award for creating a 100-second length video depicting an ad for an educational website.",
+    type: "Award",
+    date: "2014",
+    title: "achievements.digitalAd.title",
+    achievement: "achievements.digitalAd.achievement",
+    description: "achievements.digitalAd.description",
+    location: "achievements.digitalAd.description",
   },
 ];

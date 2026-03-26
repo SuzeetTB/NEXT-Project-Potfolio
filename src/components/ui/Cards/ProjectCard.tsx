@@ -6,6 +6,7 @@ import { MdClose } from "react-icons/md";
 
 import { IProject } from "@configs/data-type";
 import { fadeInLeft, fadeInUp, stagger } from "@utils/Animation";
+import { useTranslations } from "next-intl";
 
 const ProjectCard: React.FC<{
   project: IProject;
@@ -26,6 +27,7 @@ const ProjectCard: React.FC<{
   setProjectSelected,
   ...props
 }) => {
+  const t = useTranslations()
   return (
     <motion.div
       className="col-span-12 p-2 rounded glass-card sm:col-span-6 lg:col-span-4"
@@ -43,12 +45,12 @@ const ProjectCard: React.FC<{
           />
           <div className="absolute bottom-0 left-0 right-0 z-10 flex items-end justify-center text-xl font-semibold duration-300 opacity-0 group-hover:opacity-90 group-hover:bg-background">
             <h6 className="my-2 font-bold text-center text-foreground ">
-              {name}
+              {t(name)}
             </h6>
           </div>
         </div>
         <p className="justify-around mr-4 text-foreground">
-          <span className="line-clamp-2">{description}</span>
+          <span className="line-clamp-2">{t(description)}</span>
           {/* <span className="ml-4 dark:text-zeit-100">{url_deployed}</span> */}
         </p>
         {projectSelected === id && (
@@ -99,13 +101,13 @@ const ProjectCard: React.FC<{
                 variants={fadeInUp}
                 className="mb-3 text-xl font-medium md:text-2xl"
               >
-                {name}
+                {t(name)}
               </motion.h2>
               <motion.p
                 variants={fadeInUp}
                 className="mb-3 text-xl font-medium"
               >
-                {description}
+                {t(description)}
               </motion.p>
               <motion.div
                 variants={stagger}

@@ -1,40 +1,233 @@
 {
-    "profile":{
-        "first_name":"Suzeet",
-        "last_name":"Twanabasu",
-        "work_title":"Software Developer | Full Stack Developer",
-        "street_address":"Wonti",
-        "ward":"10",
-        "city":"Bhaktapur",
-        "state":"Bagmati",
-        "zip":"44800",
-        "country":"Nepal",
-        "email":"suzeettb@gmail.com",
-        "phone":"+977-9860487773",
-        "btn_download_resume":"Download Resume",
-        "btn_send_email":"Send me a Mail!",
-        "intro":"Hi, With <strong> 6+ years </strong> of experience in developing websites and apps, I'm a <strong> Full Stack Software Developer</strong> and <strong> UI/UX Developer</strong> from Nepal. I have a passion for coding & I am always looking to leverage my programming skills as a developer. I love to learn new things and find ways to improve myself. If you are here, let's build something amazing together.",
-        "intro1":"I have experience building websites, webApps and Android App. I am experienced as a front end developer with expertise on HTML5, CSS3, Bootstrap, JS; and I have a well rounded knowledge of using Adobe Photoshop, Illustrator. I am also experienced with React, NextJS, NodeJS, ExpressJS, MongoDB and FireBase."
+  "profile": {
+    "first_name": "Suzeet",
+    "last_name": "Twanabasu",
+    "work_title": "Software Developer | Full Stack Developer",
+    "street_address": "Wonti",
+    "ward": "10",
+    "city": "Bhaktapur",
+    "state": "Bagmati",
+    "zip": "44800",
+    "country": "Nepal",
+    "email": "suzeettb@gmail.com",
+    "phone": "+977-9860487773",
+    "btn_download_resume": "Download Resume",
+    "btn_send_email": "Send me a Mail!",
+    "intro": "Hi, With <strong> 6+ years </strong> of experience in developing websites and apps, I'm a <strong> Full Stack Software Developer</strong> and <strong> UI/UX Developer</strong> from Nepal. I have a passion for coding & I am always looking to leverage my programming skills as a developer. I love to learn new things and find ways to improve myself. If you are here, let's build something amazing together.",
+    "intro1": "I have experience building websites, webApps and Android App. I am experienced as a front end developer with expertise on HTML5, CSS3, Bootstrap, JS; and I have a well rounded knowledge of using Adobe Photoshop, Illustrator. I am also experienced with React, NextJS, NodeJS, ExpressJS, MongoDB and FireBase."
+  },
+  "experience": {
+    "meroparty": {
+      "title": "MeroParty",
+      "role": "Front-End Engineer",
+      "location": "Bhaktapur, Nepal",
+      "date": "August 2024 - Present",
+      "description": "Built a <em>Venue Management Tool</em> using <b>Node.js</b> and <b>React</b>. Developed web and app interfaces for venue-side management and mentored junior developers."
     },
-    "navbar":{
-        "home":"Home",
-        "about":"About",
-        "blogs":"Blogs",
-        "resume":"Resume",
-        "projects":"Projects"
+    "icc": {
+      "title": "ICC Communications",
+      "role": "Sales/Marketing",
+      "location": "Ueno, Japan",
+      "date": "December 2023 - August 2024",
+      "description": "Leveraged multilingual skills (<b>English, Nepali, Japanese</b>) to engage diverse customers. Increased <em>SIM card</em> and mobile phone sales through effective support."
     },
-    "about":{
-        "intro":"Hi, I'm Suzeet, a software developer from Nepal. I have a passion for coding & I am always looking to leverage my programming skills as a developer. I love to learn new things and find ways to improve myself.",
-        "intro1":"I have experience building websites, webApps and Android App. I am experienced as a front end developer with expertise on HTML5, CSS3, Bootstrap, JS; and I have a well rounded knowledge of using Adobe Photoshop, Illustrator. I am also experienced with React, NextJS, NodeJS, ExpressJS, MongoDB and FireBase.",
-        "exp_title":"Experience",
-        "tech_stack_title":"Skills and Stacks"
+    "axiosSoftworks": {
+      "title": "Axios Softworks",
+      "role": "Full Stack Developer",
+      "location": "Banepa, Nepal",
+      "date": "April 2021 - April 2022",
+      "description": "Developed web applications using <b>Node.js</b>, <b>React</b>, and <b>Ruby on Rails</b> for projects like <em>NIVID School Management</em>. Contributed to an Android app using <b>Kotlin</b>."
     },
-    "quick_links":"Quick Links",
-    "contact":"Contact",
-    "email":"Email",
-    "phone":"Phone",
-    "location":"Location",
-    "connect":"Connect With Me",
-    "copyright":"All Rights Reserved",
-    "built_on_stacks":"Built with Next.js, React & Tailwind CSS"
+    "cloudFactory": {
+      "title": "Cloud Factory",
+      "role": "Data Entry/Image Training",
+      "location": "Bhaisepati, Nepal",
+      "date": "September 2019 - May 2022",
+      "description": "Collected and annotated image data using proprietary tools for <b>AI model training</b> and data processing."
+    }
+  },
+  "academics": {
+    "sijli": {
+      "title": "Shintoshin International Japanese Language Institute",
+      "degree": "Japanese Language",
+      "address": "Soka, Saitama, Japan"
+    },
+    "glocal": {
+      "title": "Glocal University",
+      "degree": "Bachelor in Technology (Computer Engineering)",
+      "address": "Uttar Pradesh, India"
+    },
+    "kantipur": {
+      "title": "Kantipur Engineering College",
+      "degree": "Bachelor in Computer Engineering",
+      "address": "Lalitpur, Nepal (Dropped Out)"
+    },
+    "kanjirowa": {
+      "title": "Kanjirowa National H.S. School",
+      "degree": "HSEB (Science)",
+      "address": "Kathmandu, Nepal"
+    },
+    "himalayan": {
+      "title": "Himalayan English Sec. School",
+      "degree": "SLC",
+      "address": "Bhaktapur, Nepal"
+    }
+  },
+  "projects": {
+    "meroparty": {
+      "title": "Meroparty.com",
+      "description": "Meroparty is an event/venue management and e-commerce website to view and compare event venues and also manage the venues like bookings, halls, invoices. I worked as a web designer, full-stack developer. The site hosted from 2024."
+    },
+    "zBlog": {
+      "title": "Z Blog",
+      "description": "A blogging type simple CMS web project, Build with Node Js at backend and handbrake template engine, pagination."
+    },
+    "zeitsuETrade": {
+      "title": "Zeitsu E-trade",
+      "description": "An e-commerce web project for product sale, Build with Laravel at backend and Blade template engine, Cart system, toastr notification, Product pagination, Session  and cart checkout using Stripe."
+    },
+    "gbcc": {
+      "title": "Gesture Based Cursor Control",
+      "description": "A python based application which uses a web camera to capture image of hand and control the mouse events such as click, scroll, based on the gestures performed using the hand."
+    },
+    "vKec": {
+      "title": "Virtual KEC",
+      "description": "A 3D model-based application to provide user an experience of viewing academic buildings, laboratory buildings of KEC College in virtually designed 3D space with the aim of familiarizing the college compound to new prospects."
+    },
+    "runner": {
+      "title": "Runner Runner",
+      "description": "A simple graphics-based gaming application with 2D drawings, art and animations implementing a continuous loop of animation, plot positions-based collider functions, score points based on duration of survival and double buffering for smooth operation."
+    },
+    "companyDB": {
+      "title": "Company Database",
+      "description": "Employee Management System project built to manage employee details and records of an organization or company. It uses CRUD operations with authentication and authorization."
+    },
+    "plustwonotes": {
+      "title": "Plustwonotes.com",
+      "description": "Plustwonotes is an educational website to share and post educational material of grade 11 and 12. I worked as a web designer, Content Creator and manager. The site hosted for 3 years."
+    }
+  },
+  "skillGroups": {
+    "programming": "Programming & Scripting Languages",
+    "fullStack": "Full-Stack Development",
+    "devOps": "Cloud & DevOps",
+    "database": "Data & Databases",
+    "uiux": "UI/UX & Design",
+    "machineLearning": "Data Science & ML"
+  },
+  "trainingsAndParticipations": {
+    "bigData": {
+      "title": "Big Data Workshop",
+      "date": "2018",
+      "role": "Participant",
+      "description": "2-day workshop at Pulchowk Campus providing practical insights on <b>Hadoop, HDFS, Flume,</b> and <b>Pig</b>.",
+      "location": "Pulchowk Campus, BECon 2k18-19"
+    },
+    "studentICT": {
+      "title": "Student ICT Conference",
+      "date": "2018",
+      "role": "Attendee",
+      "description": "Participated in the conference regarding the <b>digitization of Nepal</b>, organized by IT-S.",
+      "location": "NCIT, Nepal"
+    },
+    "yCC": {
+      "title": "Yomari Code Camp",
+      "date": "January 2017",
+      "role": "Participant",
+      "description": "Built a <b>Unity project</b> for <b>earthquake emergency virtual practice</b> in the 1-Day code camp.",
+      "location": "IT Meet 2017, KU"
+    },
+    "advJava": {
+      "title": "Advanced Java",
+      "date": "2017",
+      "role": "Web Development Training",
+      "description": "Advanced training in <b>Web Development</b> using <b>Java Spring Framework</b> and JSP.",
+      "location": "Broadway Infosys"
+    },
+    "androidDev": {
+      "title": "Android Application Development",
+      "date": "2016",
+      "role": "App Development Training",
+      "description": "Focused on <b>Android App Development</b> using Java and modern UI/UX designs.",
+      "location": "KEC 2016"
+    },
+    "webDevCamp": {
+      "title": "Web Development Camp",
+      "date": "December 14, 2014",
+      "role": "Participant",
+      "description": "Intensive camp focused on <b>Modern Web Development</b> technologies and industry standards.",
+      "location": "MIC Nepal"
+    },
+    "krustile": {
+      "title": "Web Designing",
+      "date": "2012",
+      "role": "Front-End Training",
+      "description": "Foundational course covering <b>HTML, CSS, JS,</b> and <b>JQuery</b>.",
+      "location": "Krustile Education and Technical Institute"
+    }
+  },
+  "achievements": {
+    "jlpt": {
+      "title": "Japanese Language Proficiency Test",
+      "type": "Certification",
+      "achievement": "JLPT N3 Certification",
+      "description": "Successfully passed the Japanese Language Preparation Test 2023 at the N3 proficiency level."
+    },
+    "yCC": {
+      "title": "KU IT Meet 2017",
+      "type": "Award",
+      "achievement": "Best Idea Category Award",
+      "location": "Yomari Code Camp",
+      "description": "Awarded for the virtual practice application designed to cope with natural disasters with safety measures."
+    },
+    "digitalAd": {
+      "title": "Ace Kaleidoscope 2014",
+      "type": "Award",
+      "achievement": "Digital Ad Winner Award",
+      "location": "Digital Ad Competition",
+      "description": "Winner of the award for creating a 100-second length video depicting an ad for an educational website."
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "blogs": "Blogs",
+    "resume": "Resume",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "participations": "Participations",
+    "achievements": "Achievements"
+  },
+  "about": {
+    "intro": "Hi, I'm Suzeet, a software developer from Nepal. I have a passion for coding & I am always looking to leverage my programming skills as a developer. I love to learn new things and find ways to improve myself.",
+    "intro1": "I have experience building websites, webApps and Android App. I am experienced as a front end developer with expertise on HTML5, CSS3, Bootstrap, JS; and I have a well rounded knowledge of using Adobe Photoshop, Illustrator. I am also experienced with React, NextJS, NodeJS, ExpressJS, MongoDB and FireBase.",
+    "exp_title": "Experience",
+    "tech_stack_title": "Skills and Stacks",
+    "find_me_here": "Find Me Here"
+  },
+  "resume": {
+    "trainAndParticipations": "Training & Participations",
+    "academics_title": "My Academics ",
+    "academics_subtitle": "Schools and Universities that I have graduated from.",
+    "awards_title": "Awards & Certifications ",
+    "awards_subtitle": "Recognitions and achievements throughout my professional journey."
+  },
+  "get_in_touch": {
+    "title": "Get In Touch",
+    "send_me_a_message": "Send Me a Message",
+    "send_me_a_message_subtitle": "Have a project in mind? Fill out the form below.",
+    "your_name": "Your Name",
+    "your_email_address": "Email Address",
+    "your_message": "Message",
+    "send_message_button": "Send Message"
+  },
+  "quick_links": "Quick Links",
+  "contact": "Contact",
+  "email": "Email",
+  "phone": "Phone",
+  "location": "Location",
+  "connect": "Connect With Me",
+  "copyright": "All Rights Reserved",
+  "built_on_stacks": "Built with Next.js, React & Tailwind CSS"
 }

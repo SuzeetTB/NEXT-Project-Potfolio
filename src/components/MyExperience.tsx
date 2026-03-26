@@ -8,12 +8,12 @@ import useDeviceType from "@/hooks/useDeviceType";
 
 export const MyExperience = () => {
   const { isMobile } = useDeviceType();
-  const t = useTranslations("about");
+  const t = useTranslations("");
 
   return (
-    <div className="grow p-4 mt-5 custom-card-bg rounded-4xl">
+    <div id="experience" className="grow p-4 mt-5 custom-card-bg rounded-4xl">
       <h5 className="my-3 text-2xl font-bold tracking-wider text-foreground">
-        {t("exp_title")}
+        {t("about.exp_title")}
       </h5>
       <motion.div variants={stagger} initial="initial" animate="final">
         <Timeline
@@ -25,7 +25,7 @@ export const MyExperience = () => {
             label: isMobile ? (
               ""
             ) : (
-              <span className="text-foreground font-mono">{exp.date}</span>
+              <span className="text-foreground font-mono">{t(exp.date)}</span>
             ),
             dot: (
               <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />

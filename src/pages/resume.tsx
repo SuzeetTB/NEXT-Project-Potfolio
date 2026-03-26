@@ -22,7 +22,7 @@ import MyAchievements from "@/components/MyAchievements";
 
 const Resume: FC = () => {
   const { isMobile } = useDeviceType();
-  const t = useTranslations("about");
+  const t = useTranslations();
   const [services, setServices] = useState<Array<IExperience>>();
   useEffect(() => {
     setServices(experiences.slice(0, 2));
@@ -32,10 +32,10 @@ const Resume: FC = () => {
     <div>
       <MyHeader subtitle={"Resume"} />
       {/* Experience and education */}
-      <div className="flex flex-col gap-6 px-5 my-4 mt-16">
+      <div id="participations" className="flex flex-col gap-6 px-5 my-4 mt-18">
         <motion.div variants={stagger} initial="initial" animate="final">
           <h1 className="text-teal-600 dark:text-primary md:text-3xl md:font-extrabold text-lg text-center mt-8 my-4 font-bold">
-            Training & Participations
+            {t("resume.trainAndParticipations")}
           </h1>
           <Timeline
             className="ml-2 md:ml-8 w-auto"
@@ -46,7 +46,7 @@ const Resume: FC = () => {
               label: isMobile ? (
                 ""
               ) : (
-                <span className="text-foreground font-mono">{exp.date}</span>
+                <span className="text-foreground font-mono">{t(exp.date)}</span>
               ),
               dot: (
                 <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />
@@ -74,15 +74,15 @@ const Resume: FC = () => {
         >
           <div className="mb-10 text-center">
             <h2 className="text-3xl font-extrabold text-teal-600 dark:text-primary tracking-tight">
-              My Academics
+            {t("resume.academics_title")}
             </h2>
             <p className="mt-2 text-lg text-gray-500 dark:text-muted-foreground">
-              Schools and Universities that I have graduated from.
+            {t("resume.academics_subtitle")}
             </p>
           </div>
           <Flex vertical>
             <Timeline
-              className="ml-2 md:ml-8 w-auto my-9"
+              className="m-2 md:m-8 w-auto my-9"
               mode={isMobile ? "left" : "alternate"} // Options: 'left', 'alternate', 'right'
               variant="filled"
               orientation="horizontal"
@@ -92,7 +92,7 @@ const Resume: FC = () => {
                   ""
                 ) : (
                   <span className="text-foreground font-mono">
-                    {academic.year}
+                    {t(academic.year)}
                   </span>
                 ),
                 dot: (

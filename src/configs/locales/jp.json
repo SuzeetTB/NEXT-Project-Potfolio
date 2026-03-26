@@ -1,31 +1,233 @@
 {
-    "profile":{
-        "first_name":"スジート",
-        "last_name":"トワナバス",
-        "work_title":"ソフトウェア開発者",
-        "street_address":"ウォンティ",
-        "ward":"10",
-        "city":"バクタプル",
-        "state":"バグマティ",
-        "zip":"44800",
-        "country":"ネパール",
-        "email":"suzeettb@gmail.com",
-        "phone":"+977-9860487773",
-        "btn_download_resume":"履歴書をダウンロード",
-        "btn_send_email":"私にメールを送ってください!",
-        "intro":"こんにちは、私はSuzeet、ネパールからのソフトウェア開発者です。私はコーディングに情熱を注いでおり、開発者としてのプログラミングスキルを常に活用したいと考えています。私は新しいことを学び、自分自身を改善する方法を見つけるのが大好きです。",
-        "intro1":"私はウェブサイト、ウェブアプリ、Androidアプリを構築した経験があります。私はHTML5、CSS3、ブートストラップ、JSの専門知識を持つフロントエンド開発者としての経験があります。そして、私はAdobe Photoshop、Illustratorを使用するための幅広い知識を持っています。私はまた、React、NextJS、NodeJS、ExpressJS、MongoDB、FireBaseの経験もあります。"
+  "profile": {
+    "first_name": "スジット",
+    "last_name": "トゥワナバス",
+    "work_title": "ソフトウェア開発者 | フルスタックエンジニア",
+    "street_address": "ウォンティ",
+    "ward": "10",
+    "city": "バクタプル",
+    "state": "バグマティ",
+    "zip": "44800",
+    "country": "ネパール",
+    "email": "suzeettb@gmail.com",
+    "phone": "+977-9860487773",
+    "btn_download_resume": "履歴書をダウンロード",
+    "btn_send_email": "メールを送る",
+    "intro": "こんにちは。ウェブサイトやアプリの開発において <strong> 6年以上の経験 </strong> を持つ、ネパール出身の <strong> フルスタックソフトウェア開発者 </strong> および <strong> UI/UX開発者 </strong> です。コーディングに情熱を持っており、常にエンジニアとしてのプログラミングスキルを活かせる場を探しています。新しいことを学び、自己改善する方法を見つけることが大好きです。もしよろしければ、一緒に素晴らしいものを築き上げましょう。",
+    "intro1": "ウェブサイト、ウェブアプリ、Androidアプリの構築経験があります。HTML5、CSS3、Bootstrap、JSに精通したフロントエンド開発者としての経験があり、Adobe Photoshop、Illustratorの使用に関しても十分な知識を持っています。また、React、NextJS、NodeJS、ExpressJS、MongoDB、FireBaseの実務経験もあります。"
+  },
+  "experience": {
+    "meroparty": {
+      "title": "MeroParty",
+      "role": "フロントエンドエンジニア",
+      "location": "ネパール、バクタプル",
+      "date": "2024年8月 - 現在",
+      "description": "<b>Node.js</b> と <b>React</b> を使用して <em>会場管理ツール (Venue Management Tool)</em> を構築。会場側の管理用ウェブおよびアプリのインターフェースを開発し、ジュニア開発者の指導も行いました。"
     },
-    "navbar":{
-        "home":"Home",
-        "about":"About",
-        "blogs":"Blogs",
-        "resume":"Resume",
-        "projects":"Projects"
+    "icc": {
+      "title": "ICCコミュニケーションズ",
+      "role": "営業/マーケティング",
+      "location": "日本、上野",
+      "date": "2023年12月 - 2024年8月",
+      "description": "多言語スキル（<b>英語、ネパール語、日本語</b>）を活かし、多様な顧客に対応。効果的なサポートを通じて、<em>SIMカード</em> および携帯電話の販売数を増加させました。"
     },
-    "about":{
-        "intro":"こんにちは、私はSuzeet、ネパールからのソフトウェア開発者です。私はコーディングに情熱を注いでおり、開発者としてのプログラミングスキルを常に活用したいと考えています。私は新しいことを学び、自分自身を改善する方法を見つけるのが大好きです。",
-        "intro1":"私はウェブサイト、ウェブアプリ、Androidアプリを構築した経験があります。私はHTML5、CSS3、ブートストラップ、JSの専門知識を持つフロントエンド開発者としての経験があります。そして、私はAdobe Photoshop、Illustratorを使用するための幅広い知識を持っています。私はまた、React、NextJS、NodeJS、ExpressJS、MongoDB、FireBaseの経験もあります。",
-        "exp_title":"経験"
+    "axiosSoftworks": {
+      "title": "Axios Softworks",
+      "role": "フルスタック開発者",
+      "location": "ネパール、バネパ",
+      "date": "2021年4月 - 2022年4月",
+      "description": "<em>NIVID School Management</em> などのプロジェクト向けに <b>Node.js</b>、<b>React</b>、<b>Ruby on Rails</b> を使用してウェブアプリケーションを開発。<b>Kotlin</b> を使用した Android アプリ開発にも貢献しました。"
+    },
+    "cloudFactory": {
+      "title": "Cloud Factory",
+      "role": "データ入力/画像トレーニング",
+      "location": "ネパール、バイセパティ",
+      "date": "2019年9月 - 2022年5月",
+      "description": "<b>AIモデルトレーニング</b> およびデータ処理のために、独自のツールを使用して画像データの収集とアノテーションを実施しました。"
     }
+  },
+  "academics": {
+    "sijli": {
+      "title": "新都心国際日本語学校",
+      "degree": "日本語学科",
+      "address": "日本、埼玉県草加市"
+    },
+    "glocal": {
+      "title": "グローカル大学",
+      "degree": "工学士（コンピュータ工学）",
+      "address": "インド、ウッタル・プラデーシュ州"
+    },
+    "kantipur": {
+      "title": "カンティプル工科大学",
+      "degree": "コンピュータ工学士（中退）",
+      "address": "ネパール、ラリトプル"
+    },
+    "kanjirowa": {
+      "title": "カンジロワ・ナショナル・ハイスクール",
+      "degree": "HSEB（理系）",
+      "address": "ネパール、カトマンズ"
+    },
+    "himalayan": {
+      "title": "ヒマラヤン・イングリッシュ・セカンダリー・スクール",
+      "degree": "SLC（中等教育修了証明書）",
+      "address": "ネパール、バクタプル"
+    }
+  },
+  "projects": {
+    "meroparty": {
+      "title": "Meroparty.com",
+      "description": "Meropartyは、イベント会場の閲覧・比較、および予約、ホール、請求書などの管理を行えるイベント/会場管理およびEコマースサイトです。ウェブデザイナーおよびフルスタック開発者として携わりました。サイトは2024年から公開されています。"
+    },
+    "zBlog": {
+      "title": "Z Blog",
+      "description": "バックエンドにNode.js、テンプレートエンジンにhandbrakeを使用した、ページネーション機能付きのシンプルなブログ形式CMSウェブプロジェクトです。"
+    },
+    "zeitsuETrade": {
+      "title": "Zeitsu E-trade",
+      "description": "製品販売用のEコマースウェブプロジェクトです。バックエンドにLaravel、テンプレートエンジンにBladeを使用し、カートシステム、toastr通知、製品ページネーション、セッション、およびStripeを使用した決済機能を搭載しています。"
+    },
+    "gbcc": {
+      "title": "Gesture Based Cursor Control",
+      "description": "ウェブカメラで手の画像をキャプチャし、手のジェスチャーに基づいてクリックやスクロールなどのマウスイベントを制御するPythonベースのアプリケーションです。"
+    },
+    "vKec": {
+      "title": "Virtual KEC",
+      "description": "新入生がキャンパスに慣れることを目的とした、仮想デザインされた3D空間でKEC大学の校舎や研究所を閲覧できる3Dモデルベースのアプリケーションです。"
+    },
+    "runner": {
+      "title": "Runner Runner",
+      "description": "アニメーションの連続ループ、衝突判定関数、生存時間に基づくスコア、スムーズな動作のためのダブルバッファリングを実装した、2Dの図形やアニメーションによるシンプルなグラフィックスベースのゲームアプリです。"
+    },
+    "companyDB": {
+      "title": "Company Database",
+      "description": "組織や会社の従業員詳細と記録を管理するために構築された従業員管理システムプロジェクトです。認証・認可機能を備えたCRUD操作を使用しています。"
+    },
+    "plustwonotes": {
+      "title": "Plustwonotes.com",
+      "description": "Plustwonotesは、11年生および12年生向けの教材を共有・投稿するための教育ウェブサイトです。ウェブデザイナー、コンテンツクリエイター、管理者として携わりました。サイトは3年間運営されました。"
+    }
+  },
+  "skillGroups": {
+    "programming": "プログラミングおよびスクリプト言語",
+    "fullStack": "フルスタック開発",
+    "devOps": "クラウドおよびDevOps",
+    "database": "データおよびデータベース",
+    "uiux": "UI/UXおよびデザイン",
+    "machineLearning": "データサイエンスおよび機械学習"
+  },
+  "trainingsAndParticipations": {
+    "bigData": {
+      "title": "ビッグデータ・ワークショップ",
+      "date": "2018年",
+      "role": "参加者",
+      "description": "プルチョーク・キャンパスで開催された2日間のワークショップで、<b>Hadoop, HDFS, Flume,</b> および <b>Pig</b> に関する実践的な知識を学びました。",
+      "location": "プルチョーク・キャンパス、BECon 2k18-19"
+    },
+    "studentICT": {
+      "title": "学生ICTカンファレンス",
+      "date": "2018年",
+      "role": "出席者",
+      "description": "IT-S主催の、<b>ネパールのデジタル化</b>に関するカンファレンスに参加しました。",
+      "location": "NCIT、ネパール"
+    },
+    "yCC": {
+      "title": "Yomari Code Camp",
+      "date": "2017年1月",
+      "role": "参加者",
+      "description": "1日間のコードキャンプにて、<b>地震緊急事態の仮想訓練</b>のための <b>Unityプロジェクト</b> を構築しました。",
+      "location": "IT Meet 2017, KU"
+    },
+    "advJava": {
+      "title": "アドバンスJava",
+      "date": "2017年",
+      "role": "ウェブ開発トレーニング",
+      "description": "<b>Java Spring Framework</b> および JSP を使用した <b>ウェブ開発</b> の高度なトレーニング。",
+      "location": "Broadway Infosys"
+    },
+    "androidDev": {
+      "title": "Androidアプリケーション開発",
+      "date": "2016年",
+      "role": "アプリ開発トレーニング",
+      "description": "JavaとモダンなUI/UXデザインを使用した <b>Androidアプリ開発</b> に焦点を当てたトレーニング。",
+      "location": "KEC 2016"
+    },
+    "webDevCamp": {
+      "title": "ウェブ開発キャンプ",
+      "date": "2014年12月14日",
+      "role": "参加者",
+      "description": "最新のウェブ開発技術と業界標準に焦点を当てた集中キャンプ。",
+      "location": "MIC Nepal"
+    },
+    "krustile": {
+      "title": "ウェブデザイン",
+      "date": "2012年",
+      "role": "フロントエンドトレーニング",
+      "description": "<b>HTML, CSS, JS,</b> および <b>JQuery</b> をカバーする基礎コース。",
+      "location": "Krustile Education and Technical Institute"
+    }
+  },
+  "achievements": {
+    "jlpt": {
+      "title": "日本語能力試験",
+      "type": "資格",
+      "achievement": "JLPT N3 合格",
+      "description": "2023年の日本語能力試験において、N3レベルに合格しました。"
+    },
+    "yCC": {
+      "title": "KU IT Meet 2017",
+      "type": "受賞",
+      "achievement": "ベストアイデア部門賞",
+      "location": "Yomari Code Camp",
+      "description": "安全対策を伴う自然災害への対応を目的とした仮想訓練アプリケーションに対して授与されました。"
+    },
+    "digitalAd": {
+      "title": "Ace Kaleidoscope 2014",
+      "type": "受賞",
+      "achievement": "デジタル広告部門 優勝",
+      "location": "デジタル広告コンテスト",
+      "description": "教育ウェブサイトの広告を描いた100秒のビデオ制作により、優勝者に選ばれました。"
+    }
+  },
+  "navbar": {
+    "home": "ホーム",
+    "about": "自己紹介",
+    "blogs": "ブログ",
+    "resume": "履歴書",
+    "projects": "プロジェクト",
+    "skills": "スキル",
+    "experience": "職務経験",
+    "participations": "参加活動",
+    "achievements": "実績・受賞歴"
+  },
+  "about": {
+    "intro": "こんにちは、ネパール出身のソフトウェア開発者のスジットです。コーディングに情熱を持っており、常にエンジニアとしてのプログラミングスキルを活かせる場を探しています。新しいことを学び、自己改善する方法を見つけることが大好きです。",
+    "intro1": "ウェブサイト、ウェブアプリ、Androidアプリの構築経験があります。HTML5、CSS3、Bootstrap、JSに精通したフロントエンド開発者としての経験があり、Adobe Photoshop、Illustratorの使用に関しても十分な知識を持っています。また、React、NextJS、NodeJS、ExpressJS、MongoDB、FireBaseの実務経験もあります。",
+    "exp_title": "職務経験",
+    "tech_stack_title": "スキルとスタック",
+    "find_me_here": "ソーシャルリンク"
+  },
+  "resume": {
+    "trainAndParticipations": "トレーニングおよび参加活動",
+    "academics_title": "学歴",
+    "academics_subtitle": "卒業した学校および大学。",
+    "awards_title": "受賞および資格",
+    "awards_subtitle": "プロフェッショナルとしてのキャリアにおける評価と実績。"
+  },
+  "get_in_touch": {
+    "title": "お問い合わせ",
+    "send_me_a_message": "メッセージを送る",
+    "send_me_a_message_subtitle": "プロジェクトのご相談など、以下のフォームからお気軽にご連絡ください。",
+    "your_name": "お名前",
+    "your_email_address": "メールアドレス",
+    "your_message": "メッセージ",
+    "send_message_button": "メッセージを送信"
+  },
+  "quick_links": "クイックリンク",
+  "contact": "連絡先",
+  "email": "メール",
+  "phone": "電話番号",
+  "location": "所在地",
+  "connect": "SNSで繋がる",
+  "copyright": "All Rights Reserved (無断転載禁止)",
+  "built_on_stacks": "Next.js, React & Tailwind CSS で構築"
 }

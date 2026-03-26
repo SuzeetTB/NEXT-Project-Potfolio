@@ -1,12 +1,14 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { FaLocationDot } from "react-icons/fa6";
 
 const FindMe = () => {
+  const t = useTranslations("about");
   return (
     <section className="py-6 px-4 max-w-7xl mx-auto custom-card-bg rounded-2xl shadow-sm w-full">
       <div className="flex items-center gap-2 mb-4 text-2xl font-bold">
         <FaLocationDot className="text-foreground" />
-        <h2>Find Me Here</h2>
+        <h2>{t("find_me_here")}</h2>
       </div>
       <div className="mt-2 rounded-xl overflow-hidden shadow-md h-64 lg:h-100">
         <iframe
