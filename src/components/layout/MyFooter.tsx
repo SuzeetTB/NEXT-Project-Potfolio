@@ -1,3 +1,4 @@
+'use client';
 import { FC } from "react";
 import {
   IoLocationOutline,
@@ -12,7 +13,11 @@ import Link from "next/link";
 
 const MyFooter: FC = () => {
   const locale = useLocale();
-  const t = useTranslations();
+  const t = {
+    navbar: useTranslations("navbar"),
+    profile: useTranslations("profile"),
+    default: useTranslations(),
+  };
   const currentYear = new Date().getFullYear();
 
   // Reusable style for the Quick Links to keep the JSX clean
@@ -29,9 +34,9 @@ const MyFooter: FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* About Section */}
           <div className="flex flex-col gap-y-4 text-foreground">
-            <h3 className="text-xl font-bold">{t("navbar.about")}</h3>
+            <h3 className="text-xl font-bold">{t.navbar("about")}</h3>
             <p className="text-sm text-justify leading-normal text-muted-foreground">
-              {t.rich("profile.intro", {
+              {t.profile.rich("intro", {
                 strong: (chunks) => (
                   <strong className="text-foreground">{chunks}</strong>
                 ),
@@ -40,39 +45,39 @@ const MyFooter: FC = () => {
             <div className="flex items-center gap-x-3 ">
               <IoLocationOutline className="text-xl" />
               <span className="text-sm">
-                {t("profile.street_address")}-{t("profile.ward")},{" "}
-                {t("profile.city")}, {t("profile.country")}
+                {t.profile("street_address")}-{t.profile("ward")},{" "}
+                {t.profile("city")}, {t.profile("country")}
               </span>
             </div>
           </div>
 
           {/* Quick Links Section */}
           <div className="flex flex-col gap-y-4 text-foreground">
-            <h3 className="text-xl font-bold">{t("quick_links")}</h3>
+            <h3 className="text-xl font-bold">{t.default("quick_links")}</h3>
             <ul className="flex flex-col gap-y-2">
               <Link href={`/`} className={linkItemStyle}>
                 <li key={'about'} />
-                {t('navbar.about')}
+                {t.navbar('about')}
               </Link>
               <Link href={`/#skills`} className={linkItemStyle}>
                 <li key={'skills'} />
-                {t('navbar.skills')}
+                {t.navbar('skills')}
               </Link>
               <Link href={`/#experience`} className={linkItemStyle}>
                 <li key={'experience'} />
-                {t('navbar.experience')}
+                {t.navbar('experience')}
               </Link>
               <Link href={`/projects`} className={linkItemStyle}>
                 <li key={'projects'} />
-                {t('navbar.projects')}
+                {t.navbar('projects')}
               </Link>
               <Link href={`/resume#participations`} className={linkItemStyle}>
                 <li key={'participations'} />
-                {t('navbar.participations')}
+                {t.navbar('participations')}
               </Link>
               <Link href={`/resume#achievements`} className={linkItemStyle}>
                 <li key={'achievements'} />
-                {t('navbar.achievements')}
+                {t.navbar('achievements')}
               </Link>
             </ul>
           </div>
@@ -80,15 +85,15 @@ const MyFooter: FC = () => {
           {/* Contact Section */}
           <div className="flex flex-col gap-y-4">
             <h3 className="text-xl font-bold text-foreground">
-              {t("contact")}
+              {t.default("contact")}
             </h3>
             <div className="flex items-center gap-x-3 text-muted-foreground">
               <IoMailOutline className="text-xl " />
-              <span className="text-sm truncate">{t("profile.email")}</span>
+              <span className="text-sm truncate">{t.profile("email")}</span>
             </div>
             <div className="flex items-center gap-x-3 text-muted-foreground">
               <IoCallOutline className="text-xl " />
-              <span className="text-sm">{t("profile.phone")}</span>
+              <span className="text-sm">{t.profile("phone")}</span>
             </div>
             {/* <div className="flex items-center gap-x-3">
               <IoLinkOutline className="text-xl text-white dark:text-cyan-400" />
@@ -101,7 +106,7 @@ const MyFooter: FC = () => {
           {/* Connect Section - Using your custom glass-card logic */}
           <div className="flex flex-col gap-y-4">
             <h3 className="text-xl font-bold text-foreground">
-              {t("connect")}
+              {t.default("connect")}
             </h3>
             <div className="flex flex-wrap gap-4">
               <a href={`${linkLinkedIn}`} className={socialIconStyle}>
@@ -129,21 +134,21 @@ const MyFooter: FC = () => {
             {locale === "jp" ? (
               <>
                 <span className="text-foreground ">
-                  {t("profile.last_name")}
+                  {t.profile("last_name")}
                 </span>
-                <span> {t("profile.first_name")}</span>
+                <span> {t.profile("first_name")}</span>
               </>
             ) : (
               <>
                 <span className="text-foreground">
-                  {t("profile.first_name")}
+                  {t.profile("first_name")}
                 </span>{" "}
-                <span>{t("profile.last_name")}</span>
+                <span>{t.profile("last_name")}</span>
               </>
             )}{" "}
-            | {t("copyright")}
+            | {t.default("copyright")}
           </p>
-          <p className="italic">{t("built_on_stacks")}</p>
+          <p className="italic">{t.default("built_on_stacks")}</p>
         </div>
       </div>
     </footer>

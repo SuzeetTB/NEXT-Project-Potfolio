@@ -1,3 +1,4 @@
+'use client';
 import { skillGroups } from "@configs/data";
 import { fadeInUp } from "@utils/Animation";
 import { motion } from "framer-motion";

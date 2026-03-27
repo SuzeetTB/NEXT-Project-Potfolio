@@ -50,27 +50,32 @@
     "sijli": {
       "title": "Shintoshin International Japanese Language Institute",
       "degree": "Japanese Language",
-      "address": "Soka, Saitama, Japan"
+      "address": "Soka, Saitama, Japan",
+      "year": "2021-2023"
     },
     "glocal": {
       "title": "Glocal University",
       "degree": "Bachelor in Technology (Computer Engineering)",
-      "address": "Uttar Pradesh, India"
+      "address": "Uttar Pradesh, India",
+      "year": "2015-2019"
     },
     "kantipur": {
       "title": "Kantipur Engineering College",
       "degree": "Bachelor in Computer Engineering",
-      "address": "Lalitpur, Nepal (Dropped Out)"
+      "address": "Lalitpur, Nepal (Dropped Out)",
+      "year": "2014-2015"
     },
     "kanjirowa": {
       "title": "Kanjirowa National H.S. School",
       "degree": "HSEB (Science)",
-      "address": "Kathmandu, Nepal"
+      "address": "Kathmandu, Nepal",
+      "year": "2012-2014"
     },
     "himalayan": {
       "title": "Himalayan English Sec. School",
       "degree": "SLC",
-      "address": "Bhaktapur, Nepal"
+      "address": "Bhaktapur, Nepal",
+      "year": "2000~2012"
     }
   },
   "projects": {
@@ -171,21 +176,24 @@
       "title": "Japanese Language Proficiency Test",
       "type": "Certification",
       "achievement": "JLPT N3 Certification",
-      "description": "Successfully passed the Japanese Language Preparation Test 2023 at the N3 proficiency level."
+      "description": "Successfully passed the Japanese Language Preparation Test 2023 at the N3 proficiency level.",
+      "date": "2023"
     },
     "yCC": {
       "title": "KU IT Meet 2017",
       "type": "Award",
       "achievement": "Best Idea Category Award",
       "location": "Yomari Code Camp",
-      "description": "Awarded for the virtual practice application designed to cope with natural disasters with safety measures."
+      "description": "Awarded for the virtual practice application designed to cope with natural disasters with safety measures.",
+      "date": "2017"
     },
     "digitalAd": {
       "title": "Ace Kaleidoscope 2014",
       "type": "Award",
       "achievement": "Digital Ad Winner Award",
       "location": "Digital Ad Competition",
-      "description": "Winner of the award for creating a 100-second length video depicting an ad for an educational website."
+      "description": "Winner of the award for creating a 100-second length video depicting an ad for an educational website.",
+      "date": "2014"
     }
   },
   "navbar": {

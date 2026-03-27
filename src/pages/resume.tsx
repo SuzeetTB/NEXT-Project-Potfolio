@@ -1,14 +1,14 @@
 import { FC, useEffect, useState } from "react";
-import Bar from "../components/ui/Bar";
-import EducationCard from "../components/ui/Cards/EducationCard";
-import InfoCard from "../components/ui/Cards/InfoCard";
+import Bar from "@components/ui/Bar";
+import EducationCard from "@components/ui/Cards/EducationCard";
+import InfoCard from "@components/ui/Cards/InfoCard";
 import {
   academics,
   languages,
   tools,
   experiences,
   trainingsAndParticipations,
-} from "../configs/data";
+} from "@configs/data";
 import { motion } from "framer-motion";
 import { fadeInUp, stagger } from "../utils/Animation";
 import { GetStaticProps } from "next/types";
@@ -19,6 +19,20 @@ import { Flex, Timeline } from "antd";
 import useDeviceType from "@/hooks/useDeviceType";
 import { useTranslations } from "next-intl";
 import MyAchievements from "@/components/MyAchievements";
+
+/*
+ *Locale is passed as a prop to the component
+ */
+ export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const normalizedLocale = locale || "en";
+
+  return {
+    props: {
+      ...(await getI18nProps(normalizedLocale)),
+    },
+  };
+};
+
 
 const Resume: FC = () => {
   const { isMobile } = useDeviceType();
@@ -130,15 +144,4 @@ const Resume: FC = () => {
   );
 };
 
-export default Resume;
-
-/*
- *Locale is passed as a prop to the component
- */
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await getI18nProps(locale || "en")),
-    },
-  };
-};
+export default Resume

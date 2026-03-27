@@ -1,3 +1,4 @@
+'use client';
 import { experiences } from "@/configs/data";
 import { motion } from "framer-motion";
 import InfoCard from "./ui/Cards/InfoCard";
@@ -22,16 +23,16 @@ export const MyExperience = () => {
           variant="filled"
           items={experiences?.map((exp) => ({
             // The label usually shows the date on the opposite side (if mode="alternate")
-            label: isMobile ? (
+            title: isMobile ? (
               ""
             ) : (
               <span className="text-foreground font-mono">{t(exp.date)}</span>
             ),
-            dot: (
+            icon: (
               <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />
             ),
             tail: { style: { background: "white" } },
-            children: <InfoCard exp={exp} key={exp.id} />,
+            content: <InfoCard exp={exp} key={exp.id} />,
           }))}
         />
       </motion.div>

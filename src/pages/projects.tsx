@@ -9,7 +9,20 @@ import { Category } from "@configs/data-type";
 import { pageSwitchAnimation, stagger } from "@utils/Animation";
 import { getI18nProps } from "@lib/i18n";
 import MyHeader from "@components/layout/MyHeader";
-import { useTranslations } from "use-intl";
+
+/*
+ *Locale is passed as a prop to the component
+ */
+ export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const normalizedLocale = locale || "en";
+
+  return {
+    props: {
+      ...(await getI18nProps(normalizedLocale)),
+    },
+  };
+};
+
 
 type Props = {};
 
@@ -62,14 +75,3 @@ const Projects = (props: Props) => {
 };
 
 export default Projects;
-
-/*
- *Locale is passed as a prop to the component
- */
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await getI18nProps(locale || "en")),
-    },
-  };
-};

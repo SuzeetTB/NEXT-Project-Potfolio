@@ -12,6 +12,20 @@ import { MyTechStack } from "@components/MyTechStack";
 import GetInTouch from "@components/GetInTouch";
 import FindMe from "@components/FindMe";
 
+/*
+ *Locale is passed as a prop to the component
+ */
+ export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const normalizedLocale = locale || "en";
+
+  return {
+    props: {
+      ...(await getI18nProps(normalizedLocale)),
+    },
+  };
+};
+
+
 const Index: FC = () => {
   const { isDesktop } = useDeviceType();
   const t = useTranslations("about");
@@ -42,11 +56,3 @@ const Index: FC = () => {
 };
 
 export default Index;
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await getI18nProps(locale || "en")),
-    },
-  };
-};

@@ -1,3 +1,4 @@
+'use client';
 import { motion } from "framer-motion";
 import { FaFileSignature, FaMedal } from "react-icons/fa";
 import { achievements } from "@configs/data";

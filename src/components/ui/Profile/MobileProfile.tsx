@@ -1,3 +1,4 @@
+'use client';
 import { ImProfile } from "react-icons/im";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";

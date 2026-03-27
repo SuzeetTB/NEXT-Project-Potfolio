@@ -178,7 +178,7 @@ export const academics: Array<IAcademics> = [
     organization: "academics.sijli.title",
     image: "https://picsum.photos/200/300",
     degree: "academics.sijli.degree",
-    year: "2021-2023",
+    year: "academics.sijli.year",
     address: "academics.sijli.address",
   },
   {
@@ -186,7 +186,7 @@ export const academics: Array<IAcademics> = [
     organization: "academics.glocal.title",
     image: "https://picsum.photos/200/300",
     degree: "academics.glocal.degree",
-    year: "2015-2019",
+    year: "academics.glocal.year",
     address: "academics.glocal.address",
   },
   {
@@ -194,7 +194,7 @@ export const academics: Array<IAcademics> = [
     organization: "academics.kantipur.title",
     image: "https://picsum.photos/200/300",
     degree: "academics.kantipur.degree",
-    year: "2014-2015",
+    year: "academics.kantipur.year",
     address: "academics.kantipur.address",
   },
   {
@@ -202,7 +202,7 @@ export const academics: Array<IAcademics> = [
     organization: "academics.kanjirowa.title",
     image: "https://picsum.photos/200/300",
     degree: "academics.kanjirowa.degree",
-    year: "2012-2014",
+    year: "academics.kanjirowa.year",
     address: "academics.kanjirowa.address",
   },
   {
@@ -210,7 +210,7 @@ export const academics: Array<IAcademics> = [
     organization: "academics.himalayan.title",
     image: "https://picsum.photos/200/300",
     degree: "academics.himalayan.degree",
-    year: "2000~2012",
+    year: "academics.himalayan.year",
     address: "academics.himalayan.address",
   },
 ];
@@ -615,7 +615,7 @@ export const achievements: Array<IAchievement> = [
   {
     id: 1,
     type: "Certification",
-    date: "2023",
+    date: "achievements.jlpt.date",
     title: "achievements.jlpt.title",
     achievement: "achievements.jlpt.achievement",
     description: "achievements.jlpt.description",
@@ -623,7 +623,7 @@ export const achievements: Array<IAchievement> = [
   {
     id: 2,
     type: "Award",
-    date: "2017",
+    date: "achievements.yCC.date",
     title: "achievements.yCC.title",
     achievement: "achievements.yCC.achievement",
     description: "achievements.yCC.description",
@@ -632,7 +632,7 @@ export const achievements: Array<IAchievement> = [
   {
     id: 3,
     type: "Award",
-    date: "2014",
+    date: "achievements.digitalAd.date",
     title: "achievements.digitalAd.title",
     achievement: "achievements.digitalAd.achievement",
     description: "achievements.digitalAd.description",

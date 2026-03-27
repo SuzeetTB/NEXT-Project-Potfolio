@@ -1,3 +1,4 @@
+'use client';
 import { useTheme } from "next-themes";
 import { FaGlobe, FaMoon, FaSun } from "react-icons/fa6";
 import { useRouter } from "next/router";

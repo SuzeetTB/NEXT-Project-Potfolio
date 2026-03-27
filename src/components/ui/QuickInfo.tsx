@@ -1,3 +1,4 @@
+'use client';
 import { useTranslations } from "next-intl";
 import { AiOutlineMail } from "react-icons/ai";
 import { GiRotaryPhone } from "react-icons/gi";

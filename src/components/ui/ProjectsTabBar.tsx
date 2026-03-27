@@ -1,3 +1,4 @@
+'use client';
 import { FC } from "react";
 
 import { Category } from "@configs/data-type";

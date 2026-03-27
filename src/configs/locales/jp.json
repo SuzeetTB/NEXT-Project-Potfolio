@@ -50,27 +50,32 @@
     "sijli": {
       "title": "新都心国際日本語学校",
       "degree": "日本語学科",
-      "address": "日本、埼玉県草加市"
+      "address": "日本、埼玉県草加市",
+      "year": "2021年-2023年"
     },
     "glocal": {
       "title": "グローカル大学",
       "degree": "工学士（コンピュータ工学）",
-      "address": "インド、ウッタル・プラデーシュ州"
+      "address": "インド、ウッタル・プラデーシュ州",
+      "year": "2015年-2019年"
     },
     "kantipur": {
       "title": "カンティプル工科大学",
       "degree": "コンピュータ工学士（中退）",
-      "address": "ネパール、ラリトプル"
+      "address": "ネパール、ラリトプル",
+      "year": "2014年-2015年"
     },
     "kanjirowa": {
       "title": "カンジロワ・ナショナル・ハイスクール",
       "degree": "HSEB（理系）",
-      "address": "ネパール、カトマンズ"
+      "address": "ネパール、カトマンズ",
+      "year": "2012年-2014年"
     },
     "himalayan": {
       "title": "ヒマラヤン・イングリッシュ・セカンダリー・スクール",
       "degree": "SLC（中等教育修了証明書）",
-      "address": "ネパール、バクタプル"
+      "address": "ネパール、バクタプル",
+      "year": "2000年~2012年"
     }
   },
   "projects": {
@@ -171,21 +176,24 @@
       "title": "日本語能力試験",
       "type": "資格",
       "achievement": "JLPT N3 合格",
-      "description": "2023年の日本語能力試験において、N3レベルに合格しました。"
+      "description": "2023年の日本語能力試験において、N3レベルに合格しました。",
+      "date": "2023年"
     },
     "yCC": {
       "title": "KU IT Meet 2017",
       "type": "受賞",
       "achievement": "ベストアイデア部門賞",
       "location": "Yomari Code Camp",
-      "description": "安全対策を伴う自然災害への対応を目的とした仮想訓練アプリケーションに対して授与されました。"
+      "description": "安全対策を伴う自然災害への対応を目的とした仮想訓練アプリケーションに対して授与されました。",
+      "date": "2017年"
     },
     "digitalAd": {
       "title": "Ace Kaleidoscope 2014",
       "type": "受賞",
       "achievement": "デジタル広告部門 優勝",
       "location": "デジタル広告コンテスト",
-      "description": "教育ウェブサイトの広告を描いた100秒のビデオ制作により、優勝者に選ばれました。"
+      "description": "教育ウェブサイトの広告を描いた100秒のビデオ制作により、優勝者に選ばれました。",
+      "date": "2014年"
     }
   },
   "navbar": {

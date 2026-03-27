@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  distDir: 'build', // Note: '.next' is the default; 'build' is fine if you prefer it
+  distDir: '.next', // Note: '.next' is the default; 'build' is fine if you prefer it
   images: {
     qualities: [25, 50, 75, 100], // Add this line
     remotePatterns: [

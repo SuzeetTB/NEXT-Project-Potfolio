@@ -7,6 +7,20 @@ import { pageSwitchAnimation } from "@utils/Animation";
 
 type Props = {};
 
+/*
+ *Locale is passed as a prop to the component
+ */
+ export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const normalizedLocale = locale || "en";
+
+  return {
+    props: {
+      ...(await getI18nProps(normalizedLocale)),
+    },
+  };
+};
+
+
 const Blogs = (props: Props) => {
   return (
     <motion.div
@@ -39,14 +53,3 @@ const Blogs = (props: Props) => {
 };
 
 export default Blogs;
-
-/*
- *Locale is passed as a prop to the component
- */
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await getI18nProps(locale || "en")),
-    },
-  };
-};

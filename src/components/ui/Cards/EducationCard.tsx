@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 
 import { IAcademics } from "@configs/data-type";
