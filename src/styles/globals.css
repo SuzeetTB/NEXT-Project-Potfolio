@@ -8,6 +8,8 @@
   /* Fonts */
   --font-monton: "Monoton", cursive;
   --font-inspiration: "Inspiration", cursive;
+  --font-kyokasho: var(--font-kyokasho);
+
 
   /* Simplified Palette */
   --color-primary: #26f7fd;
@@ -122,6 +124,9 @@
     color: #fff;
   }
 
+  .font-kyokasho {
+    font-family: var(--font-kyokasho), sans-serif;
+  }
 
   /* Standard CSS for scrollbars */
   ::-webkit-scrollbar-thumb {

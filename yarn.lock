@@ -4066,6 +4066,11 @@ prettier-linter-helpers@^1.0.1:
   dependencies:
     fast-diff "^1.1.2"
 
+prettier@^3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.8.3.tgz#560f2de55bf01b4c0503bc629d5df99b9a1d09b0"
+  integrity sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==
+
 prop-types@^15.6.1, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
@@ -4363,6 +4368,13 @@ set-proto@^1.0.0:
     es-errors "^1.3.0"
     es-object-atoms "^1.0.0"
 
+shaders@^2.5.124:
+  version "2.5.124"
+  resolved "https://registry.yarnpkg.com/shaders/-/shaders-2.5.124.tgz#41e3a43cd2cf685f485a864c600a9e2b64e51c1d"
+  integrity sha512-Q5I4U+uYrg/wU7OEBq3OG/WAkL571Qbh90Ejb6SEXj9pdAhjX6SrS8wW3Zfu7NCqpENKwLsePIfWzymwaHZW+w==
+  dependencies:
+    three "^0.184.0"
+
 shallow-equal@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/shallow-equal/-/shallow-equal-3.1.0.tgz#e7a54bac629c7f248eff6c2f5b63122ba4320bec"
@@ -4593,6 +4605,11 @@ tapable@^2.3.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.3.2.tgz#86755feabad08d82a26b891db044808c6ad00f15"
   integrity sha512-1MOpMXuhGzGL5TTCZFItxCc0AARf1EZFQkGqMm7ERKj8+Hgr5oLvJOVFcC+lRmR8hCe2S3jC4T5D7Vg/d7/fhA==
+
+three@^0.184.0:
+  version "0.184.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.184.0.tgz#5bca0a3851eea5345e4c205567b40dfa49b791b5"
+  integrity sha512-wtTRjG92pM5eUg/KuUnHsqSAlPM296brTOcLgMRqEeylYTh/CdtvKUvCyyCQTzFuStieWxvZb8mVTMvdPyUpxg==
 
 throttle-debounce@^5.0.0, throttle-debounce@^5.0.2:
   version "5.0.2"

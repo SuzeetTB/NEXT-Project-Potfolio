@@ -27,6 +27,7 @@
     "react-responsive": "^10.0.0",
     "react-toastify": "^11.0.5",
     "react-tsparticles": "^2.12.2",
+    "shaders": "^2.5.124",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
@@ -45,6 +46,7 @@
     "eslint-plugin-tailwindcss": "^3.18.2",
     "eslint-plugin-unused-imports": "^4.4.1",
     "postcss": "^8.5.8",
+    "prettier": "^3.8.3",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   }

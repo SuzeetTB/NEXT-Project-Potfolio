@@ -4,11 +4,13 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { AnimatePresence } from "framer-motion";
 import { NextIntlClientProvider } from "next-intl";
 import { AppProps } from "next/app";
+import { Shader, Aurora } from 'shaders/react'
 
 import MyFooter from "@components/layout/MyFooter";
 import MyNavbar from "@components/layout/MyNavBar";
-import "@styles/globals.css";
 import { GetStaticProps } from "next";
+import { kyokasho } from "@/lib/fonts";
+import "@styles/globals.css";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +37,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       }}
     >
       <ThemeProvider attribute="class" defaultTheme="system">
-        <div className="overflow-hidden max-w-7xl mx-auto">
+      <div className="absolute inset-0 -z-10">
+        <Shader className="w-full h-full">
+          <Aurora intensity={80} balance={0.7} seed={0.8} />
+        </Shader>
+      </div>
+        <div
+          className={`overflow-hidden max-w-7xl mx-auto + ${kyokasho.variable}`}
+        >
           <MyNavbar />
           <QueryClientProvider client={queryClient} contextSharing={true}>
             <AnimatePresence>
