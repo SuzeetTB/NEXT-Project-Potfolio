@@ -18,7 +18,7 @@
   /* Additional UI Colors if needed */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted-foreground: #6ba5a7;
+  --color-muted-foreground: var(--muted-foreground);
 
   /* Animations */
   --animation-wiggle: wiggle 1s ease-in-out infinite;
@@ -78,25 +78,28 @@
   :root {
     --background: #1a2f4d;
     --foreground: #2083b1;
-    --muted-foreground: #63a6cc;
+    --muted-foreground: #134463;
   }
 
   .dark {
-    --background: #389797;
+    --background: #143636;
     --foreground: #26f7fd;
-    --muted-foreground: #6ba5a7;
+    --muted-foreground: #93d7da;
   }
+
   .ant-dropdown-menu {
     padding: 0% !important;
   }
+
   .ant-dropdown-menu-item:hover {
     background-color: var(--foreground) !important;
     color: var(--background) !important;
     margin: 0%;
   }
+
   .ant-dropdown-menu-item {
     color: var(--foreground) !important;
-  } 
+  }
 }
 
 @layer utilities {

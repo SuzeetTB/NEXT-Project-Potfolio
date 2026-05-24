@@ -1,9 +1,11 @@
-'use client';
+"use client";
 import { useTheme } from "next-themes";
-import { FaGlobe, FaMoon, FaSun } from "react-icons/fa6";
+import { PiFlagBannerFoldFill } from "react-icons/pi";
+import { FaEarthAsia, FaFlagUsa, FaMoon, FaSun } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import { useLocale } from "next-intl";
 import { Dropdown, MenuProps, Space, Switch } from "antd";
+import { FaDotCircle } from "react-icons/fa";
 
 const ThemeAndLanguageToggler = () => {
   const { theme, setTheme } = useTheme();
@@ -29,16 +31,19 @@ const ThemeAndLanguageToggler = () => {
       key: "1",
       onClick: changeLocaletoNp,
       label: "नेपाली",
+      icon: <PiFlagBannerFoldFill />,
     },
     {
       key: "2",
       onClick: changeLocaletoEn,
       label: "English",
+      icon: <FaFlagUsa />,
     },
     {
       key: "3",
       onClick: changeLocaletoJp,
       label: "日本語",
+      icon: <FaDotCircle />,
     },
   ];
 
@@ -46,7 +51,7 @@ const ThemeAndLanguageToggler = () => {
     <div className="flex items-center">
       <Space className="px-2 my-1 rounded-r-md rotate-0">
         <Switch
-          className="bg-foreground"
+          className="bg-background"
           checkedChildren={<FaSun className="mt-1" />}
           unCheckedChildren={<FaMoon />}
           onClick={changeTheme}
@@ -68,7 +73,10 @@ const ThemeAndLanguageToggler = () => {
         placement="bottomLeft"
       >
         <Space className="w-8 h-6 p-0 ring-0 border-0">
-          <FaGlobe className="w-5 h-5 text-foreground rounded-2xl shadow-2xl ring-foreground p-0.5" />
+          <FaEarthAsia
+            size={20}
+            className="shadow-2xl ring-2 ring-background rounded-4xl p-0.5 animate-spin"
+          />
         </Space>
       </Dropdown>
     </div>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { SocialLinks } from "@/components/ui/SocialLinks";
@@ -22,12 +22,9 @@ export default function Profile({}: ProfileProps) {
         <SendMailButton />
       </div>
 
-      <div
-        id="right-section"
-        className="py-4 my-3 text-muted-foreground w-6/12"
-      >
+      <div id="right-section" className="py-4 my-3 w-8/12">
         <div id="name" className="my-3 mt-9">
-          <h3 className="my-2 mt-4 text-5xl font-extrabold tracking-wider text-muted-foreground font-inspiration">
+          <h3 className="my-2 mt-4 text-7xl font-extrabold tracking-wider text-muted-foreground">
             {locale === "jp" ? (
               <>
                 <span className="text-foreground">{t("last_name")}</span>
@@ -40,6 +37,7 @@ export default function Profile({}: ProfileProps) {
               </>
             )}
           </h3>
+
           <p className="py-2 my-3 mt-2 text-foreground text-left text-3xl font-bold">
             {t("work_title")}
           </p>
