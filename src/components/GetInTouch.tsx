@@ -11,6 +11,13 @@ import {
 } from "react-icons/ai";
 import { FaLocationDot, FaMessage } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import {
+  linkGithub,
+  linkLinkedIn,
+  linkMailTo,
+  linkPhoneTo,
+  linkYoutube,
+} from "@configs/url";
 
 const GetInTouch = () => {
   const t = useTranslations();
@@ -44,17 +51,17 @@ const GetInTouch = () => {
           className="lg:col-span-2 glass-card p-8 rounded-xl shadow-lg md:w-4/6 hover:scale-101 duration-300"
         >
           <h3 className="text-xl text-foreground font-semibold mb-2">
-          {t("get_in_touch.send_me_a_message")}
+            {t("get_in_touch.send_me_a_message")}
           </h3>
           <p className="text-muted-foreground mb-6 text-sm">
-          {t("get_in_touch.send_me_a_message_subtitle")}
+            {t("get_in_touch.send_me_a_message_subtitle")}
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="gap-y-1">
                 <label className="text-base font-bold text-foreground">
-                {t("get_in_touch.your_name")}
+                  {t("get_in_touch.your_name")}
                 </label>
                 <input
                   type="text"
@@ -133,26 +140,37 @@ const GetInTouch = () => {
           <div className="mt-8 pt-8 border-t border-teal-500 text-white">
             <p className="text-sm font-bold mb-4">{t("connect")}</p>
             <div className="flex gap-4 text-xl">
-              <a href="#" className="hover:text-teal-200 transition-colors">
+              <a
+                aria-label="My Github"
+                href={`${linkGithub}`}
+                className="hover:text-teal-200 transition-colors"
+              >
                 <AiFillGithub />
               </a>
-              <a href="#" className="hover:text-teal-200 transition-colors">
+              <a
+                aria-label="My LinkedIn"
+                href={`${linkLinkedIn}`}
+                className="hover:text-teal-200 transition-colors"
+              >
                 <AiFillLinkedin />
               </a>
               <a
-                href="https://www.youtube.com/@zeit_su?sub_confirmation=1"
+                aria-label="My Youtube"
+                href={`${linkYoutube}`}
                 className="hover:text-teal-200 transition-colors"
               >
                 <AiFillYoutube />
               </a>
               <a
-                href="https://www.youtube.com/@zeit_su?sub_confirmation=1"
+                aria-label="My Mail"
+                href={`${linkMailTo}`}
                 className="hover:text-teal-200 transition-colors"
               >
                 <AiFillMail />
               </a>
               <a
-                href="https://www.youtube.com/@zeit_su?sub_confirmation=1"
+                aria-label="My Phone"
+                href={`${linkPhoneTo}`}
                 className="hover:text-teal-200 transition-colors"
               >
                 <AiFillPhone />

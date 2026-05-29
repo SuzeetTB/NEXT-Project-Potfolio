@@ -5,3 +5,5 @@ export const linkLinkedIn = "https://www.linkedin.com/in/suzeet-twanabasu-76944b
 export const linkYoutube = "https://www.youtube.com/@zeit_su?sub_confirmation=1";
 export const linkInsta = "https://www.instagram.com/zeit_su/";
 export const linkGithub = "https://github.com/SuzeetTB"
+export const linkMailTo = "mailto:suzeettb@gmail.com"
+export const linkPhoneTo = "tel:+9779860487773"

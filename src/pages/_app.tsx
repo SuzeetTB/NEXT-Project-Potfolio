@@ -38,12 +38,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     >
       <ThemeProvider attribute="class" defaultTheme="system">
       <div className="absolute inset-0 -z-10">
-        <Shader className="w-full h-full">
+        <Shader className="w-full h-full fixed">
           <Aurora intensity={80} balance={0.7} seed={0.8} />
         </Shader>
       </div>
         <div
-          className={`overflow-hidden max-w-7xl mx-auto + ${kyokasho.variable}`}
+          className={`overflow-hidden max-w-7xl mx-auto ${kyokasho.variable}`}
         >
           <MyNavbar />
           <QueryClientProvider client={queryClient} contextSharing={true}>

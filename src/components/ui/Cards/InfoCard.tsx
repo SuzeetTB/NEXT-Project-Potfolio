@@ -24,14 +24,14 @@ const InfoCard: FC<{ exp: IExperience }> = ({
       />
       <div className="w-auto ">
         {role && (
-          <h2 className="text-2xl font-bold text-foreground">{t(role)}</h2>
+          <h3 className="text-2xl font-bold text-foreground">{t(role)}</h3>
         )}
         <h4 className="text-lg font-bold text-foreground">
           {t(title)}
           {location && <span className="text-xs">, {t(location)}</span>}
         </h4>
         {date && isMobile && (
-          <h1 className="text-sm font-bold text-muted-foreground">{t(date)}</h1>
+          <span className="text-sm font-bold text-muted-foreground">{t(date)}</span>
         )}
 
         <p className="text-foreground text-justify">

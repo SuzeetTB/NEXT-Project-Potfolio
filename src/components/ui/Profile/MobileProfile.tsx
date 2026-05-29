@@ -36,7 +36,7 @@ export default function Sidebar({}: Props) {
           {t("work_title")}
         </p>
         <Link
-          className="flex items-center justify-center p-2 my-2 glass-card rounded-full md:w-2/5 right-0 text-foreground hover:scale-105 duration-200"
+          className="flex items-center justify-center p-2 my-2 glass-card rounded-full lg:w-2/5 w-full right-0 text-foreground hover:scale-105 duration-200"
           // Use encodeURI for the path, but keep the download name as is
           href={
             locale === "jp"

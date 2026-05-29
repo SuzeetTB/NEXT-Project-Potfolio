@@ -110,7 +110,7 @@
   }
 
   .custom-tag-bg {
-    @apply text-foreground text-sm font-medium rounded-full bg-linear-to-r from-dark/20 to-primary/90 dark:from-primary/10 dark:to-dark/70 shadow-md;
+    @apply text-foreground text-sm font-medium rounded-full bg-linear-to-r from-dark/20 to-primary/40 dark:from-primary/10 dark:to-dark/70 shadow-md;
   }
 
   .glass-card {
@@ -125,7 +125,39 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     padding: 20px;
     color: #fff;
+    transition: all 0.3s ease; /* smooth transition */
+    background-image: radial-gradient(
+    circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.25),
+    transparent 80%
+  );
   }
+
+  .glass-card:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.15); /* slightly brighter */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: scale(1.02); /* subtle zoom */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* deeper shadow */
+    border-color: rgba(255, 255, 255, 0.3); /* more defined border */
+  
+    /* simulated light source effect */
+    background-image: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.45),
+      transparent 80%
+    );
+  }
+  
 
   .font-kyokasho {
     font-family: var(--font-kyokasho), sans-serif;

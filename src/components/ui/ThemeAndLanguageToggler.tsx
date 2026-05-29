@@ -51,6 +51,8 @@ const ThemeAndLanguageToggler = () => {
     <div className="flex items-center">
       <Space className="px-2 my-1 rounded-r-md rotate-0">
         <Switch
+          id="theme switch"
+          title="theme-toggler"
           className="bg-background"
           checkedChildren={<FaSun className="mt-1" />}
           unCheckedChildren={<FaMoon />}

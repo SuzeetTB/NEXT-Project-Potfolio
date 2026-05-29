@@ -16,7 +16,7 @@ export default function Profile({}: ProfileProps) {
       id="profile"
       className="flex flex-1 w-auto justify-around items-center"
     >
-      <div id="left-section" className="flex flex-col w-3/12">
+      <div id="left-section" className="flex flex-col w-3/12 gap-4">
         <ProfileAvatar />
         <SocialLinks />
         <SendMailButton />
@@ -49,7 +49,7 @@ export default function Profile({}: ProfileProps) {
             })}
           </h4>
           <Link
-            className="flex items-center justify-center p-2 my-2 glass-card rounded-full w-2/5 right-0 text-foreground hover:scale-105 duration-200"
+            className="flex items-center justify-center p-2 my-2 glass-card rounded-full lg:w-2/5 w-full right-0 text-foreground hover:scale-105 duration-200"
             // Use encodeURI for the path, but keep the download name as is
             href={
               locale === "jp"
@@ -63,6 +63,7 @@ export default function Profile({}: ProfileProps) {
             }
             target="_blank" // Adding this helps trigger the download action better
             rel="noopener noreferrer"
+            aria-label="Download resume"
           >
             <FaDownload className="w-6 h-6 mr-2" /> {t("btn_download_resume")}
           </Link>

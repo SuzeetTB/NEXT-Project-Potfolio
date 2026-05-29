@@ -13,9 +13,9 @@ export const MyExperience = () => {
 
   return (
     <div id="experience" className="grow p-4 mt-5 custom-card-bg rounded-4xl">
-      <h5 className="my-3 text-2xl font-bold tracking-wider text-foreground">
+      <h2 className="my-3 text-2xl font-bold tracking-wider text-foreground">
         {t("about.exp_title")}
-      </h5>
+      </h2>
       <motion.div variants={stagger} initial="initial" animate="final">
         <Timeline
           className="ml-2 md:ml-8 w-auto"

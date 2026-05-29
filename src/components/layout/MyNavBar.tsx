@@ -33,11 +33,11 @@ const NavItem: FC<{
       className="relative flex items-center gap-2 text-xl group"
       onClick={() => setActiveNavItem(item.name)}
     >
-      <span className="text-lg text-teal-400 transition-all group-hover:text-teal-200">
+      <span className="text-lg text-foreground transition-all group-hover:text-teal-400">
         {item.icon}
       </span>
 
-      <span className="font-medium text-foreground hover:text-transparent bg-clip-text hover:bg-linear-to-bl from-teal-500 to-teal-100 md:text-2xl">
+      <span className="font-medium text-foreground hover:text-transparent bg-clip-text group-hover:bg-linear-to-bl from-teal-300 to-teal-500 md:text-2xl">
         {item.name}
       </span>
     </Link>
@@ -92,7 +92,7 @@ const MyNavbar = () => {
 
           <ThemeAndLanguageToggler />
         </div>
-{/* Active Page Title */}
+        {/* Active Page Title */}
         <span className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-bl from-teal-500 to-teal-100 border-b-4 border-teal-500">
           {activeNavItem !== t("home") && activeNavItem}
         </span>
@@ -164,11 +164,7 @@ const MyNavbar = () => {
   );
 };
 
-const NavList = ({
-  navItems,
-  activeNavItem,
-  onItemClick,
-}: any) => (
+const NavList = ({ navItems, activeNavItem, onItemClick }: any) => (
   <>
     {navItems.map((item: NavItemType) => (
       <NavItem

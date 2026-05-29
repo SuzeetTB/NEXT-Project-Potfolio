@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { FC } from "react";
 import {
   IoLocationOutline,
@@ -55,30 +55,65 @@ const MyFooter: FC = () => {
           <div className="flex flex-col gap-y-4 text-foreground">
             <h3 className="text-xl font-bold">{t.default("quick_links")}</h3>
             <ul className="flex flex-col gap-y-2">
-              <Link href={`/`} className={linkItemStyle}>
-                <li key={'about'} />
-                {t.navbar('about')}
-              </Link>
-              <Link href={`/#skills`} className={linkItemStyle}>
-                <li key={'skills'} />
-                {t.navbar('skills')}
-              </Link>
-              <Link href={`/#experience`} className={linkItemStyle}>
-                <li key={'experience'} />
-                {t.navbar('experience')}
-              </Link>
-              <Link href={`/projects`} className={linkItemStyle}>
-                <li key={'projects'} />
-                {t.navbar('projects')}
-              </Link>
-              <Link href={`/resume#participations`} className={linkItemStyle}>
-                <li key={'participations'} />
-                {t.navbar('participations')}
-              </Link>
-              <Link href={`/resume#achievements`} className={linkItemStyle}>
-                <li key={'achievements'} />
-                {t.navbar('achievements')}
-              </Link>
+              <li>
+                <Link
+                  aria-label="My Details"
+                  href="/"
+                  className={linkItemStyle}
+                >
+                  {t.navbar("about")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  aria-label="My Skills"
+                  href="/#skills"
+                  className={linkItemStyle}
+                >
+                  {t.navbar("skills")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  aria-label="My Experience"
+                  href="/#experience"
+                  className={linkItemStyle}
+                >
+                  {t.navbar("experience")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  aria-label="My Projects"
+                  href="/projects"
+                  className={linkItemStyle}
+                >
+                  {t.navbar("projects")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  aria-label="My Participations"
+                  href="/resume#participations"
+                  className={linkItemStyle}
+                >
+                  {t.navbar("participations")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  aria-label="My Achievements"
+                  href="/resume#achievements"
+                  className={linkItemStyle}
+                >
+                  {t.navbar("achievements")}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -97,7 +132,7 @@ const MyFooter: FC = () => {
             </div>
             {/* <div className="flex items-center gap-x-3">
               <IoLinkOutline className="text-xl text-white dark:text-cyan-400" />
-              <a href="#" className="text-sm text-white dark:text-cyan-400 border-b border-cyan-600 dark:border-cyan-400 pb-0.5">
+              <a aria-label="My " href="#" className="text-sm text-white dark:text-cyan-400 border-b border-cyan-600 dark:border-cyan-400 pb-0.5">
                 All Links
               </a>
             </div> */}
@@ -109,16 +144,24 @@ const MyFooter: FC = () => {
               {t.default("connect")}
             </h3>
             <div className="flex flex-wrap gap-4">
-              <a href={`${linkLinkedIn}`} className={socialIconStyle}>
+              <a
+                aria-label="My LinkedIn"
+                href={`${linkLinkedIn}`}
+                className={socialIconStyle}
+              >
                 <FaLinkedinIn />
               </a>
-              <a href={`${linkGithub}`} className={socialIconStyle}>
+              <a
+                aria-label="My Github"
+                href={`${linkGithub}`}
+                className={socialIconStyle}
+              >
                 <FaGithub />
               </a>
-              <a href="#" className={socialIconStyle}>
+              <a aria-label="My #" href="#" className={socialIconStyle}>
                 <SiLeetcode />
               </a>
-              <a href="#" className={socialIconStyle}>
+              <a aria-label="My #" href="#" className={socialIconStyle}>
                 <SiLinktree />
               </a>
             </div>
