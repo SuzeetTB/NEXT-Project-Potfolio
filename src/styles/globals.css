@@ -5,11 +5,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Fonts */
-  --font-monton: "Monoton", cursive;
-  --font-inspiration: "Inspiration", cursive;
+  /* Fonts — variables set by next/font in _app.tsx */
   --font-kyokasho: var(--font-kyokasho);
-
+  --font-inter: var(--font-inter);
+  --font-kalam: var(--font-kalam);
+  --font-kalima: var(--font-kalima);
+  --font-inspiration: var(--font-inspiration);
+  --font-monoton: var(--font-monoton);
 
   /* Simplified Palette */
   --color-primary: #26f7fd;
@@ -159,8 +161,34 @@
   }
   
 
+  /* Locale body font classes */
+  .font-jp {
+    font-family: var(--font-kyokasho), "UD Digi Kyokasho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  }
+
+  .font-en {
+    font-family: var(--font-inter), "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-np {
+    font-family: var(--font-kalam), "Kalam", "Mangal", "Kantipur", serif;
+  }
+
+  /* Decorative font utility classes */
   .font-kyokasho {
-    font-family: var(--font-kyokasho), sans-serif;
+    font-family: var(--font-kyokasho), serif;
+  }
+
+  .font-kalima {
+    font-family: var(--font-kalima), cursive;
+  }
+
+  .font-inspiration {
+    font-family: var(--font-inspiration), cursive;
+  }
+
+  .font-monoton {
+    font-family: var(--font-monoton), cursive;
   }
 
   /* Standard CSS for scrollbars */

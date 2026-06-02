@@ -57,16 +57,16 @@ const Resume: FC = () => {
             variant="filled"
             items={trainingsAndParticipations?.map((exp) => ({
               // The label usually shows the date on the opposite side (if mode="alternate")
-              label: isMobile ? (
+              title: isMobile ? (
                 ""
               ) : (
                 <span className="text-foreground font-mono">{t(exp.date)}</span>
               ),
-              dot: (
+              icon: (
                 <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />
               ),
               tail: { style: { background: "white" } },
-              children: <InfoCard exp={exp} key={exp.id} />,
+              content: <InfoCard exp={exp} key={exp.id} />,
             }))}
           />
         </motion.div>
@@ -102,18 +102,18 @@ const Resume: FC = () => {
               orientation="horizontal"
               items={academics?.map((academic) => ({
                 // The label usually shows the date on the opposite side (if mode="alternate")
-                label: isMobile ? (
+                title: isMobile ? (
                   ""
                 ) : (
                   <span className="text-foreground font-mono">
                     {t(academic.year)}
                   </span>
                 ),
-                dot: (
+                icon: (
                   <div className="size-4 rounded-full bg-foreground shadow-[0_0_10px_var(--color-cyan-400)] mt-2" />
                 ),
                 tail: { style: { background: "white" } },
-                children: (
+                content: (
                   <EducationCard academic={academic} key={academic.id} />
                 ),
               }))}
@@ -122,7 +122,7 @@ const Resume: FC = () => {
         </motion.div>
       </div>
       {/* Skills */}
-      {/* <div className="gap-6 mt-6">
+      <div className="gap-6 mt-6">
         <div className="grid gap-6 text-white lg:grid-cols-2 md:grid-cols-2">
           <div className="p-5 rounded-2xl">
             <h5 className="my-3 text-2xl font-bold">Languages & Frameworks</h5>
@@ -139,7 +139,7 @@ const Resume: FC = () => {
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

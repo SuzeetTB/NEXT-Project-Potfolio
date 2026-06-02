@@ -20,14 +20,6 @@ class MyDocument extends Document<{ locale?: string }> {
     return (
       <Html lang={this.props.locale || "en"}>
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inspiration&family=Monoton&display=swap"
-            rel="stylesheet"
-          />
-
           <meta
             name="description"
             content="Full Stack Web Developer looking for job"

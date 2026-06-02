@@ -9,7 +9,14 @@ import { Shader, Aurora } from 'shaders/react'
 import MyFooter from "@components/layout/MyFooter";
 import MyNavbar from "@components/layout/MyNavBar";
 import { GetStaticProps } from "next";
-import { kyokasho } from "@/lib/fonts";
+import {
+  kyokasho,
+  inter,
+  kalam,
+  kalima,
+  inspiration,
+  monoton,
+} from "@/lib/fonts";
 import "@styles/globals.css";
 
 const queryClient = new QueryClient();
@@ -25,11 +32,27 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  const locale = router.locale || "en";
+
+  const fontVariables = [
+    kyokasho.variable,
+    inter.variable,
+    kalam.variable,
+    kalima.variable,
+    inspiration.variable,
+    monoton.variable,
+  ].join(" ");
+
+  const localeFontClass = {
+    en: "font-en",
+    jp: "font-jp",
+    np: "font-np",
+  }[locale];
+
   return (
     <NextIntlClientProvider
-      locale={router.locale || "en"}
-      messages={pageProps.messages || messagesMap[router.locale as Locale]}
-      // timeZone="Asia/Kathmandu"
+      locale={locale}
+      messages={pageProps.messages || messagesMap[locale as Locale]}
       onError={(error) => {
         if (error.code === "MISSING_MESSAGE") {
           console.warn("Missing message:", error.name);
@@ -43,7 +66,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         </Shader>
       </div>
         <div
-          className={`overflow-hidden max-w-7xl mx-auto ${kyokasho.variable}`}
+          className={`overflow-hidden max-w-7xl mx-auto ${fontVariables} ${localeFontClass}`}
         >
           <MyNavbar />
           <QueryClientProvider client={queryClient} contextSharing={true}>

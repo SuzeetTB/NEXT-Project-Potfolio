@@ -24,7 +24,7 @@ export default function Profile({}: ProfileProps) {
 
       <div id="right-section" className="py-4 my-3 w-8/12">
         <div id="name" className="my-3 mt-9">
-          <h3 className="my-2 mt-4 text-7xl font-extrabold tracking-wider text-muted-foreground">
+          <h3 className={`my-2 mt-4 text-6xl font-extrabold tracking-wider text-muted-foreground ${locale === "np" ? "font-kalam" : "font-kalima"}`}>
             {locale === "jp" ? (
               <>
                 <span className="text-foreground">{t("last_name")}</span>
