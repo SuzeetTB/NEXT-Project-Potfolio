@@ -16,6 +16,7 @@ import {
   inspiration,
   monoton,
 } from "@/lib/fonts";
+// @ts-ignore Next.js handles global CSS imports at build time.
 import "@styles/globals.css";
 
 const queryClient = new QueryClient();
