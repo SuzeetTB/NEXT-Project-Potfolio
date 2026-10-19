@@ -1,3 +1,4 @@
+"use client";
 import Particles from "react-tsparticles";
 
 type Props = {

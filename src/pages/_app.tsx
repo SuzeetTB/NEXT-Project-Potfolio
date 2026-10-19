@@ -1,4 +1,4 @@
-import { getI18nProps, Locale, messagesMap } from "@lib/i18n";
+import { Locale, messagesMap } from "@lib/i18n";
 import { ThemeProvider } from "next-themes";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { AnimatePresence } from "framer-motion";
@@ -8,7 +8,6 @@ import { Shader, Aurora } from 'shaders/react'
 
 import MyFooter from "@components/layout/MyFooter";
 import MyNavbar from "@components/layout/MyNavBar";
-import { GetStaticProps } from "next";
 import {
   kyokasho,
   inter,
@@ -17,19 +16,10 @@ import {
   inspiration,
   monoton,
 } from "@/lib/fonts";
+// @ts-expect-error CSS is loaded by Next.js and has no TypeScript module declaration.
 import "@styles/globals.css";
 
 const queryClient = new QueryClient();
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const normalizedLocale = locale || "en";
-
-  return {
-    props: {
-      ...(await getI18nProps(normalizedLocale)),
-    },
-  };
-};
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const locale = router.locale || "en";
