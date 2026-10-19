@@ -11,9 +11,7 @@ interface HeaderProps {
 export default function MyHeader({ title, subtitle }: HeaderProps) {
   return (
     <Head>
-      <title>
-        {title ?? "Suzeet Twanabasu"} | {subtitle ?? "Full Stack Developer"}
-      </title>
+      <title>{`${title ?? "Suzeet Twanabasu"} | ${subtitle ?? "Full Stack Developer"}`}</title>
       <link rel="icon" href="assets/images/my_logo.png" type="image/png"></link>
       <meta
         name="description"

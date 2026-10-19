@@ -16,7 +16,6 @@ import {
   inspiration,
   monoton,
 } from "@/lib/fonts";
-// @ts-expect-error CSS is loaded by Next.js and has no TypeScript module declaration.
 import "@styles/globals.css";
 
 const queryClient = new QueryClient();
